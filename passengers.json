@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Member 1",
+        "age": 35,
+        "gender": "M",
+        "preference": "Lower"
+    },
+    {
+        "name": "Member 2",
+        "age": 32,
+        "gender": "F",
+        "preference": "Lower"
+    },
+    {
+        "name": "Member 3",
+        "age": 10,
+        "gender": "M",
+        "preference": "Middle"
+    },
+    {
+        "name": "Member 4",
+        "age": 8,
+        "gender": "F",
+        "preference": "Upper"
+    }
+]

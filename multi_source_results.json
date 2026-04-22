@@ -1,0 +1,438 @@
+{
+    "paytm": {
+        "12915": {
+            "name": "ASHRAM EXPRESS",
+            "classes": [
+                {
+                    "class": "1A",
+                    "status": "WL 5",
+                    "fare": "\u20b93,110",
+                    "chance": "70%",
+                    "source": "Paytm"
+                },
+                {
+                    "class": "3A",
+                    "status": "NOT OPEN (TATKAL)",
+                    "fare": null,
+                    "chance": "70%",
+                    "source": "Paytm"
+                },
+                {
+                    "class": "2A",
+                    "status": "NOT OPEN (TATKAL)",
+                    "fare": null,
+                    "chance": "70%",
+                    "source": "Paytm"
+                },
+                {
+                    "class": "SL",
+                    "status": "WL 94",
+                    "fare": "\u20b9515",
+                    "chance": "70%",
+                    "source": "Paytm"
+                },
+                {
+                    "class": "3E",
+                    "status": "WL 37",
+                    "fare": "\u20b91,235",
+                    "chance": "70%",
+                    "source": "Paytm"
+                },
+                {
+                    "class": "3A",
+                    "status": "WL 88",
+                    "fare": "\u20b91,325",
+                    "chance": "70%",
+                    "source": "Paytm"
+                },
+                {
+                    "class": "2A",
+                    "status": "WL 32",
+                    "fare": "\u20b91,865",
+                    "chance": "70%",
+                    "source": "Paytm"
+                },
+                {
+                    "class": "SL",
+                    "status": "NOT OPEN (TATKAL)",
+                    "fare": null,
+                    "chance": "70%",
+                    "source": "Paytm"
+                }
+            ]
+        },
+        "12957": {
+            "name": "SBIB NDLS RAJ",
+            "classes": [
+                {
+                    "class": "3A",
+                    "status": "NOT OPEN (TATKAL)",
+                    "fare": null,
+                    "chance": "61%",
+                    "source": "Paytm"
+                },
+                {
+                    "class": "2A",
+                    "status": "NOT OPEN (TATKAL)",
+                    "fare": null,
+                    "chance": "61%",
+                    "source": "Paytm"
+                },
+                {
+                    "class": "3A",
+                    "status": "WL 120",
+                    "fare": "\u20b92,355",
+                    "chance": "61%",
+                    "source": "Paytm"
+                },
+                {
+                    "class": "2A",
+                    "status": "WL 52",
+                    "fare": "\u20b93,200",
+                    "chance": "61%",
+                    "source": "Paytm"
+                },
+                {
+                    "class": "1A",
+                    "status": "REGRET",
+                    "fare": "\u20b93,945",
+                    "chance": "61%",
+                    "source": "Paytm"
+                }
+            ]
+        },
+        "19031": {
+            "name": "YOGA EXPRESS",
+            "classes": [
+                {
+                    "class": "SL",
+                    "status": "REGRET",
+                    "fare": "\u20b9500",
+                    "chance": null,
+                    "source": "Paytm"
+                },
+                {
+                    "class": "3E",
+                    "status": "REGRET",
+                    "fare": "\u20b91,210",
+                    "chance": null,
+                    "source": "Paytm"
+                },
+                {
+                    "class": "3A",
+                    "status": "REGRET",
+                    "fare": "\u20b91,305",
+                    "chance": null,
+                    "source": "Paytm"
+                },
+                {
+                    "class": "2A",
+                    "status": "REGRET",
+                    "fare": "\u20b91,855",
+                    "chance": null,
+                    "source": "Paytm"
+                },
+                {
+                    "class": "1A",
+                    "status": "REGRET",
+                    "fare": "\u20b93,100",
+                    "chance": null,
+                    "source": "Paytm"
+                }
+            ]
+        },
+        "20937": {
+            "name": "PBR DEE EXPRESS",
+            "classes": [
+                {
+                    "class": "SL",
+                    "status": "REGRET",
+                    "fare": "\u20b9515",
+                    "chance": null,
+                    "source": "Paytm"
+                },
+                {
+                    "class": "3A",
+                    "status": "REGRET",
+                    "fare": "\u20b91,325",
+                    "chance": null,
+                    "source": "Paytm"
+                },
+                {
+                    "class": "2A",
+                    "status": "REGRET",
+                    "fare": "\u20b91,865",
+                    "chance": null,
+                    "source": "Paytm"
+                },
+                {
+                    "class": "1A",
+                    "status": "REGRET",
+                    "fare": "\u20b93,110",
+                    "chance": null,
+                    "source": "Paytm"
+                }
+            ]
+        },
+        "12216": {
+            "name": "DEE GARIBRATH",
+            "classes": [
+                {
+                    "class": "3A",
+                    "status": "WL 61",
+                    "fare": "\u20b9965",
+                    "chance": "28%",
+                    "source": "Paytm"
+                }
+            ]
+        }
+    },
+    "confirmtkt": {
+        "card-list": {
+            "name": "Pbr Dee Express",
+            "classes": [
+                {
+                    "class": "SL",
+                    "status": "Regret (No more booking)",
+                    "fare": " \u20b9515",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "3A",
+                    "status": "Regret (No more booking)",
+                    "fare": " \u20b91325",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "2A",
+                    "status": "Regret (No more booking)",
+                    "fare": " \u20b91865",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "1A",
+                    "status": "Regret (No more booking)",
+                    "fare": " \u20b93110",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "SL",
+                    "status": "Regret (No more booking)",
+                    "fare": " \u20b9500",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "3E",
+                    "status": "None (WL 32)",
+                    "fare": " \u20b91210",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "3A",
+                    "status": "Regret (No more booking)",
+                    "fare": " \u20b91305",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "2A",
+                    "status": "Regret (No more booking)",
+                    "fare": " \u20b91855",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "1A",
+                    "status": "Regret (No more booking)",
+                    "fare": " \u20b93100",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "3A",
+                    "status": "None (WL 61)",
+                    "fare": " \u20b9965",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "3A",
+                    "status": "WL 122 (46% Chance)",
+                    "fare": " \u20b92355",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "2A",
+                    "status": "None (WL 54)",
+                    "fare": " \u20b93200",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "1A",
+                    "status": "Regret (No more booking)",
+                    "fare": " \u20b93945",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "SL",
+                    "status": "None (WL 94)",
+                    "fare": " \u20b9515",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "3E",
+                    "status": "WL 40 (Low Chance)",
+                    "fare": " \u20b91235",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "3A",
+                    "status": "None (WL 89)",
+                    "fare": " \u20b91325",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "2A",
+                    "status": "None (WL 32)",
+                    "fare": " \u20b91865",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "1A",
+                    "status": "None (WL 5)",
+                    "fare": " \u20b93110",
+                    "source": "ConfirmTkt"
+                }
+            ]
+        },
+        "20937": {
+            "name": "Pbr Dee Express",
+            "classes": [
+                {
+                    "class": "SL",
+                    "status": "Regret (No more booking)",
+                    "fare": " \u20b9515",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "3A",
+                    "status": "Regret (No more booking)",
+                    "fare": " \u20b91325",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "2A",
+                    "status": "Regret (No more booking)",
+                    "fare": " \u20b91865",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "1A",
+                    "status": "Regret (No more booking)",
+                    "fare": " \u20b93110",
+                    "source": "ConfirmTkt"
+                }
+            ]
+        },
+        "19031": {
+            "name": "Yoga Express",
+            "classes": [
+                {
+                    "class": "SL",
+                    "status": "Regret (No more booking)",
+                    "fare": " \u20b9500",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "3E",
+                    "status": "None (WL 32)",
+                    "fare": " \u20b91210",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "3A",
+                    "status": "Regret (No more booking)",
+                    "fare": " \u20b91305",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "2A",
+                    "status": "Regret (No more booking)",
+                    "fare": " \u20b91855",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "1A",
+                    "status": "Regret (No more booking)",
+                    "fare": " \u20b93100",
+                    "source": "ConfirmTkt"
+                }
+            ]
+        },
+        "12216": {
+            "name": "Dee Garibrath",
+            "classes": [
+                {
+                    "class": "3A",
+                    "status": "None (WL 61)",
+                    "fare": " \u20b9965",
+                    "source": "ConfirmTkt"
+                }
+            ]
+        },
+        "12957": {
+            "name": "Sbib Ndls Raj",
+            "classes": [
+                {
+                    "class": "3A",
+                    "status": "WL 122 (46% Chance)",
+                    "fare": " \u20b92355",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "2A",
+                    "status": "None (WL 54)",
+                    "fare": " \u20b93200",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "1A",
+                    "status": "Regret (No more booking)",
+                    "fare": " \u20b93945",
+                    "source": "ConfirmTkt"
+                }
+            ]
+        },
+        "12915": {
+            "name": "Ashram Express",
+            "classes": [
+                {
+                    "class": "SL",
+                    "status": "None (WL 94)",
+                    "fare": " \u20b9515",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "3E",
+                    "status": "WL 40 (Low Chance)",
+                    "fare": " \u20b91235",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "3A",
+                    "status": "None (WL 89)",
+                    "fare": " \u20b91325",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "2A",
+                    "status": "None (WL 32)",
+                    "fare": " \u20b91865",
+                    "source": "ConfirmTkt"
+                },
+                {
+                    "class": "1A",
+                    "status": "None (WL 5)",
+                    "fare": " \u20b93110",
+                    "source": "ConfirmTkt"
+                }
+            ]
+        }
+    }
+}

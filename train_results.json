@@ -1,0 +1,248 @@
+[
+    {
+        "name": "ASHRAM EXPRESS",
+        "number": "12915",
+        "departure": {
+            "time": "19:45,",
+            "date": " 03 May ",
+            "station": "Sabarmati Bg"
+        },
+        "arrival": {
+            "time": "10:00",
+            "date": "04 May,",
+            "station": "Old Delhi"
+        },
+        "duration": "14h 15m",
+        "availabilities": [
+            {
+                "class": "1A",
+                "status": "WL 5",
+                "fare": "\u20b93,110",
+                "chance": "70%",
+                "is_tatkal": false
+            },
+            {
+                "class": "3A",
+                "status": "RAC 38",
+                "fare": null,
+                "chance": null,
+                "is_tatkal": true
+            },
+            {
+                "class": "2A",
+                "status": "AVL 2",
+                "fare": null,
+                "chance": null,
+                "is_tatkal": true
+            },
+            {
+                "class": "SL",
+                "status": "WL 94",
+                "fare": "\u20b9515",
+                "chance": "41%",
+                "is_tatkal": false
+            },
+            {
+                "class": "3E",
+                "status": "WL 37",
+                "fare": "\u20b91,235",
+                "chance": "69%",
+                "is_tatkal": false
+            },
+            {
+                "class": "3A",
+                "status": "WL 88",
+                "fare": "\u20b91,325",
+                "chance": "68%",
+                "is_tatkal": false
+            },
+            {
+                "class": "2A",
+                "status": "WL 30",
+                "fare": "\u20b91,865",
+                "chance": "68%",
+                "is_tatkal": false
+            },
+            {
+                "class": "SL",
+                "status": "WL 36",
+                "fare": null,
+                "chance": "54%",
+                "is_tatkal": true
+            }
+        ]
+    },
+    {
+        "name": "SBIB NDLS RAJ",
+        "number": "12957",
+        "departure": {
+            "time": "19:20,",
+            "date": " 03 May ",
+            "station": "Sabarmati Bg"
+        },
+        "arrival": {
+            "time": "07:30",
+            "date": "04 May,",
+            "station": "New Delhi"
+        },
+        "duration": "12h 10m",
+        "availabilities": [
+            {
+                "class": "3A",
+                "status": "NOT OPEN",
+                "fare": null,
+                "chance": null,
+                "is_tatkal": true
+            },
+            {
+                "class": "2A",
+                "status": "NOT OPEN",
+                "fare": null,
+                "chance": null,
+                "is_tatkal": true
+            },
+            {
+                "class": "3A",
+                "status": "WL 120",
+                "fare": "\u20b92,355",
+                "chance": "61%",
+                "is_tatkal": false
+            },
+            {
+                "class": "2A",
+                "status": "WL 52",
+                "fare": "\u20b93,200",
+                "chance": "63%",
+                "is_tatkal": false
+            },
+            {
+                "class": "1A",
+                "status": "REGRET",
+                "fare": "\u20b93,945",
+                "chance": null,
+                "is_tatkal": false
+            }
+        ]
+    },
+    {
+        "name": "YOGA EXPRESS",
+        "number": "19031",
+        "departure": {
+            "time": "11:25,",
+            "date": " 03 May ",
+            "station": "Sabarmati Bg"
+        },
+        "arrival": {
+            "time": "05:19",
+            "date": "04 May,",
+            "station": "Delhi Shahdara"
+        },
+        "duration": "17h 54m",
+        "availabilities": [
+            {
+                "class": "SL",
+                "status": "REGRET",
+                "fare": "\u20b9500",
+                "chance": null,
+                "is_tatkal": false
+            },
+            {
+                "class": "3E",
+                "status": "REGRET",
+                "fare": "\u20b91,210",
+                "chance": null,
+                "is_tatkal": false
+            },
+            {
+                "class": "3A",
+                "status": "REGRET",
+                "fare": "\u20b91,305",
+                "chance": null,
+                "is_tatkal": false
+            },
+            {
+                "class": "2A",
+                "status": "REGRET",
+                "fare": "\u20b91,855",
+                "chance": null,
+                "is_tatkal": false
+            },
+            {
+                "class": "1A",
+                "status": "REGRET",
+                "fare": "\u20b93,100",
+                "chance": null,
+                "is_tatkal": false
+            }
+        ]
+    },
+    {
+        "name": "PBR DEE EXPRESS",
+        "number": "20937",
+        "departure": {
+            "time": "04:10,",
+            "date": " 03 May ",
+            "station": "Chandlodiya"
+        },
+        "arrival": {
+            "time": "19:30",
+            "date": "03 May,",
+            "station": "Delhi S Rohilla"
+        },
+        "duration": "15h 20m",
+        "availabilities": [
+            {
+                "class": "SL",
+                "status": "REGRET",
+                "fare": "\u20b9515",
+                "chance": null,
+                "is_tatkal": false
+            },
+            {
+                "class": "3A",
+                "status": "REGRET",
+                "fare": "\u20b91,325",
+                "chance": null,
+                "is_tatkal": false
+            },
+            {
+                "class": "2A",
+                "status": "REGRET",
+                "fare": "\u20b91,865",
+                "chance": null,
+                "is_tatkal": false
+            },
+            {
+                "class": "1A",
+                "status": "REGRET",
+                "fare": "\u20b93,110",
+                "chance": null,
+                "is_tatkal": false
+            }
+        ]
+    },
+    {
+        "name": "DEE GARIBRATH",
+        "number": "12216",
+        "departure": {
+            "time": "19:00,",
+            "date": " 03 May ",
+            "station": "Ahmedabad Jn"
+        },
+        "arrival": {
+            "time": "11:00",
+            "date": "04 May,",
+            "station": "Delhi S Rohilla"
+        },
+        "duration": "16h 00m",
+        "availabilities": [
+            {
+                "class": "3A",
+                "status": "WL 62",
+                "fare": "\u20b9965",
+                "chance": "28%",
+                "is_tatkal": false
+            }
+        ]
+    }
+]

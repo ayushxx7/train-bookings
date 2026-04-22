@@ -1,0 +1,448 @@
+<html lang="en"><head><meta charset="UTF-8"><link rel="icon" type="image/svg+xml" href="https://www.confirmtkt.com/favicon.ico"><meta name="theme-color" content="#fff"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Train Ticket booking Online with confirmation prediction, get confirm train ticket with train seat availability,train fare,tatkal quota and vikalp trains,alternates"><link rel="canonical" href="https://www.confirmtkt.com"><title>
+      Confirm Ticket - Train Ticket booking Online | Train seat availability
+    </title><meta name="keywords" content="Confirm Ticket, irctc tickets,Train tickets,train seat"><link rel="preload" href="https://cdn.confirmtkt.com/fonts/ixisans/ixi_regular.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://cdn.confirmtkt.com/fonts/ixisans/ixi_medium.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://cdn.confirmtkt.com/fonts/ixisans/ixi_bold.woff2" as="font" type="font/woff2" crossorigin=""><style>
+      @font-face {
+        font-family: 'ixi-sans';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src:
+          url('https://cdn.confirmtkt.com/fonts/ixisans/ixi_regular.woff2')
+            format('woff2'),
+          url('https://cdn.confirmtkt.com/fonts/ixisans/ixi_regular.woff')
+            format('woff');
+      }
+
+      @font-face {
+        font-family: 'ixi-sans';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src:
+          url('https://cdn.confirmtkt.com/fonts/ixisans/ixi_medium.woff2')
+            format('woff2'),
+          url('https://cdn.confirmtkt.com/fonts/ixisans/ixi_medium.woff')
+            format('woff');
+      }
+
+      @font-face {
+        font-family: 'ixi-sans';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src:
+          url('https://cdn.confirmtkt.com/fonts/ixisans/ixi_bold.woff2')
+            format('woff2'),
+          url('https://cdn.confirmtkt.com/fonts/ixisans/ixi_bold.woff')
+            format('woff');
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #splash-screen {
+        font-family: 'ixi-sans', sans-serif;
+        position: fixed;
+        background: #42a047;
+        width: 100%;
+        height: 100vh;
+        color: #fff;
+        padding-top: clamp(20%, 30%, 300px);
+        text-align: center;
+      }
+
+      .splash-content {
+        font-weight: 500;
+      }
+
+      .description {
+        position: fixed;
+        bottom: 80px;
+        font-size: 16px;
+        text-align: center;
+        left: 0;
+        right: 0;
+      }
+
+      .loader {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+        border: 5px solid #fff;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+      }
+
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .loader-new {
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+        stroke: #42a047;
+        animation: spin 1s linear infinite;
+        transform-origin: center;
+      }
+    </style><script type="module" crossorigin="" src="/rbooking/assets/index-DhSJk6C-.js"></script><link rel="stylesheet" crossorigin="" href="/rbooking/assets/index-t-w7BXJY.css"><script src="https://www.googletagmanager.com/gtag/js?l=dataLayer&amp;id=G-YCJ5JQDVW6" async=""></script><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-B3s0H30a.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/ArrowRightLong-CRWe5ffY.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/CheckCircle-DFjO7rvQ.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/Close-DywjH7VM.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-D08uGX5Z.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/commonMethods--ZxVpc1x.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/isValidHostname-CDKgBnqm.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/createAbortController-BNzSG2ni.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-BiMv-oZS.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/user-apis-BfNyAi2c.js"><link rel="stylesheet" crossorigin="" href="/rbooking/assets/index-Dbri25cv.css"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-iS92Bfd_.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-5hvyWx0_.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-C5ynAfP3.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/freeCancellation-rALwGiog.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/getTGContentData-Bkfmq_EW.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/sessionStorage-6iMRq5VO.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/getInsuranceContentApi-CNwlDnj9.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/triggerEvent-Bn3Jreqi.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/objectFromEntries-DT5-TDkx.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/useShare-BCrcG4pe.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-BL56v0D1.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-DVgDyMH6.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/useControlledState-37e9174c-B4OxE_Qx.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/config-C3jMzDeJ.js"><link rel="stylesheet" crossorigin="" href="/rbooking/assets/index-BY8KqXqa.css"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-D7nTG08E.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/firebaseRemoteConfig-Bk8Voqyc.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-ClqTIdyB.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/Star-zw9z2UEJ.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/alternateDataHelper-Cdk-NGxr.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/helper-Cil__qfJ.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/validation-BusH9pn6.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/wimtApi-EN6Ps8xc.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/train-apis-BEPI4_6Z.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/CommonContext-B5YagSLs.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/getSixDaysAvailabilityApi-CfPV7krs.js"><link rel="stylesheet" crossorigin="" href="/rbooking/assets/index-BDH5uiGr.css"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-BB3h_Q7_.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/ArrowLeft-CmbZHwn5.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/getStationListApi-B0_E4ENY.js"><script type="text/javascript" src="https://in1.clevertap-prod.com/a?t=96&amp;type=push&amp;d=N4IgLgngDgpiBcIYDcYDswgDROWAcgIYC2ciA7gF4BOA1gPoBmMYAxgBba5gAihYhBKEzwALAF8cASwAmCEACUA7KIC0AVgAcALVU6l2rlADmCAIw5CjISAA2UgEbzyMB6oDOM2quRmAdGZKAUbUAPZgoayhtvLsYGBQ7iCSIADq2goA0vQAwgCCALIACjbkxFAIAAw45FLlVThgtqwIANoAujVSTS3wHeLiQAAA&amp;rn=2&amp;i=1776773574&amp;sn=0&amp;s=1776773574&amp;gc=25e0a1b81fca447781e6eab396366fde&amp;tries=1&amp;origin=https%3A%2F%2Fwww.confirmtkt.com&amp;useIP=false&amp;r=1776773574800" class="ct-jp-cb" rel="nofollow" async=""></script><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/TrainDescription-DrGxtp1G.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-DhSJk6C-.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-nBTfUi3D.js"><link rel="stylesheet" crossorigin="" href="/rbooking/assets/index-BzkFaKco.css"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/Filter-CmeloWvd.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/Calendar-DO2MDv2a.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/Check-mO2DjIV1.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-DhXrvL5d.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-DMw58P-0.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-2hDUAqRB.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-BaWhD3Pa.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/InfoCircle-CbnA_Xfp.js"><style type="text/css">.react-calendar {
+  width: 350px;
+  max-width: 100%;
+  background: white;
+  border: 1px solid #a0a096;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+}
+.react-calendar--doubleView {
+  width: 700px;
+}
+.react-calendar--doubleView .react-calendar__viewContainer {
+  display: flex;
+  margin: -0.5em;
+}
+.react-calendar--doubleView .react-calendar__viewContainer > * {
+  width: 50%;
+  margin: 0.5em;
+}
+.react-calendar,
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after {
+  box-sizing: border-box;
+}
+.react-calendar button {
+  margin: 0;
+  border: 0;
+  outline: none;
+}
+.react-calendar button:enabled:hover {
+  cursor: pointer;
+}
+.react-calendar__navigation {
+  display: flex;
+  height: 44px;
+  margin-bottom: 1em;
+}
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
+}
+.react-calendar__navigation button:disabled {
+  background-color: #f0f0f0;
+}
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #e6e6e6;
+}
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.75em;
+}
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5em;
+}
+.react-calendar__month-view__weekNumbers .react-calendar__tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+.react-calendar__month-view__days__day--weekend {
+  color: #d10000;
+}
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #757575;
+}
+.react-calendar__year-view .react-calendar__tile,
+.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__century-view .react-calendar__tile {
+  padding: 2em 0.5em;
+}
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 10px 6.6667px;
+  background: none;
+  text-align: center;
+  line-height: 16px;
+}
+.react-calendar__tile:disabled {
+  background-color: #f0f0f0;
+}
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: #e6e6e6;
+}
+.react-calendar__tile--now {
+  background: #ffff76;
+}
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: #ffffa9;
+}
+.react-calendar__tile--hasActive {
+  background: #76baff;
+}
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  background: #a9d4ff;
+}
+.react-calendar__tile--active {
+  background: #006edc;
+  color: white;
+}
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #1087ff;
+}
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: #e6e6e6;
+}
+.react-calendar .month-view--heading {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 18px;
+}
+.react-calendar {
+  width: 100%;
+  border-width: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--bg-primary) / var(--tw-bg-opacity));
+  font-family: ixi-type, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --tw-text-opacity: 1;
+  color: rgb(var(--text-secondary) / var(--tw-text-opacity));
+}
+.react-calendar__navigation button {
+  background: none;
+  font-size: 18px;
+  line-height: 1.4;
+  margin-top: 0.5rem;
+  display: flex;
+  min-width: 44px;
+  justify-content: space-around;
+  gap: 9rem;
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(var(--text-primary) / var(--tw-text-opacity));
+}
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--bg-primary) / var(--tw-bg-opacity));
+}
+.react-calendar__navigation button[disabled] {
+  background-color: none;
+}
+abbr[title] {
+  text-decoration: none;
+}
+.react-calendar__month-view__days__day--weekend {
+  --tw-text-opacity: 1;
+  color: rgb(var(--text-primary) / var(--tw-text-opacity));
+}
+.react-calendar__tile {
+  --tw-text-opacity: 1;
+  color: rgb(var(--text-primary) / var(--tw-text-opacity));
+}
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  border-radius: 10px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--bg-selection-subtle) / var(--tw-bg-opacity));
+}
+.react-calendar__tile--now {
+  background-color: transparent;
+}
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--bg-selection-subtle) / var(--tw-bg-opacity));
+}
+.react-calendar__tile--active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--bg-selection-solid) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(var(--text-selection-solid) / var(--tw-text-opacity));
+}
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(var(--bg-selection-solid) / var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1;
+  color: rgb(var(--text-selection-solid) / var(--tw-text-opacity));
+}
+.react-calendar--selectRange .react-calendar__tile--hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--bg-selection-subtle) / var(--tw-bg-opacity));
+}
+.react-calendar__tile--range {
+  border-radius: 0px;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(var(--bg-selection-moderate) / var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1;
+  color: rgb(29 38 60 / var(--tw-text-opacity));
+}
+.react-calendar__tile--rangeStart {
+  border-radius: 10px;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(var(--bg-selection-solid) / var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1;
+  color: rgb(var(--text-selection-solid) / var(--tw-text-opacity));
+}
+.react-calendar__tile--rangeStart:has(+ .react-calendar__tile--range):not(:nth-child(7n)) {
+  box-shadow: 10px 0px 0px #e5f0fc;
+}
+.react-calendar__tile--rangeEnd {
+  border-radius: 10px;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(var(--bg-selection-solid) / var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1;
+  color: rgb(var(--text-selection-solid) / var(--tw-text-opacity));
+}
+.react-calendar__tile--range:has(+ .react-calendar__tile--rangeEnd):not(:nth-child(7n)) {
+  box-shadow: 10px 0px 0px 0px #e5f0fc;
+}
+.react-calendar__tile:disabled {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--bg-primary) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(var(--text-disabled) / var(--tw-text-opacity));
+}
+.react-calendar__navigation__label__divider {
+  display: none;
+}
+.react-calendar__month-view__weekdays__weekday {
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.react-calendar__month-view__days__day--neighboringMonth {
+  visibility: hidden;
+}
+.react-calendar__navigation button:disabled {
+  background-color: transparent;
+}
+.react-calendar--doubleView .react-calendar__viewContainer {
+  gap: 2rem;
+}
+.react-calendar__tile {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+  min-height: 46px;
+  padding: 0px;
+}
+.react-calendar--scrollMonthView {
+  padding-top: 55px;
+}
+.react-calendar--scrollMonthView .react-calendar__viewContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+.react-calendar--scrollMonthView .react-calendar__month-view__weekdays__weekday {
+  /* we don't show weekdays for each month */
+  display: none;
+}
+.react-calendar--scrollMonthView .react-calendar__viewContainer > *:first-of-type .react-calendar__month-view__weekdays {
+  margin-top: -100px;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(var(--border-disabled) / var(--tw-border-opacity));
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.react-calendar--scrollMonthView .react-calendar__viewContainer > *:first-of-type .react-calendar__month-view__weekdays__weekday{
+  display: block;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.react-calendar--scrollMonthView .react-calendar__viewContainer > *:first-of-type .react-calendar__month-view__days {
+  margin-top: 60px;
+}
+.react-calendar .month-view--heading {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}</style><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-8TXCJpNQ.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-Citwuy3A.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-rzK1pnf-.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/Carousel-MpJWTJDz.js"><link rel="stylesheet" crossorigin="" href="/rbooking/assets/index-B-r3gvx1.css"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/CacheCard-5GziPTcn.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/index-jSpmC5wu.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/bundle-mjs-Ct8u8BPc.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/helper-CKZ_i98M.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/Price-BWqvwTJ3.js"><link rel="modulepreload" as="script" crossorigin="" href="/rbooking/assets/predictionColorStyles-y6_LfX6I.js"><link rel="stylesheet" crossorigin="" href="/rbooking/assets/CacheCard-C2Q01_U4.css"></head><body style="overflow: hidden;">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="app"><div class="relative min-h-dvh bg-neutral-60"><header class="sticky top-0 z-[100] w-full bg-white shadow-md"><div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"><div class="flex items-center"><a href="https://www.confirmtkt.com"><img width="135" height="30" alt="confirmtkt" class="h-8 w-auto" src="https://cdn.confirmtkt.com/img/logo/ct-logo-with-name@3x.webp"></a></div><div class="flex items-center space-x-6"><button class="inline-flex justify-center items-center bg-brand-solid text-brand-solid hover:bg-brand-solid-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 border-none bg-transparent !p-0 font-medium text-gray-700 hover:bg-transparent">FLIGHTS</button><button class="inline-flex justify-center items-center bg-brand-solid text-brand-solid hover:bg-brand-solid-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 border-none bg-transparent !p-0 font-medium text-gray-700 hover:bg-transparent">HOTELS</button><div class="ml-4"><button class="flex cursor-pointer items-center border-none bg-transparent p-0 hover:bg-transparent" type="button" aria-label="Login"><div class="h-8 w-8 rounded-full bg-[#bdbdbd]"><svg width="1em" height="1em" font-size="1.5rem" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-testid="PersonFilledIcon" class="text-white" style="user-select: none; display: inline-block;"><path d="M19.0186 15.1863c-4.0156-3.41-10.0014-3.4071-14.0275-.0148-1.9352 1.6306-.8679 4.891 1.7434 4.891h10.523c2.5951 0 3.6944-3.2345 1.7611-4.8762"></path><path d="M15.8914 7.9701c0 2.1582-1.7512 3.9077-3.9115 3.9077s-3.9115-1.7495-3.9115-3.9077c0-2.158 1.7512-3.9076 3.9115-3.9076s3.9115 1.7495 3.9115 3.9076"></path></svg></div><span class="ml-2 block text-sm font-medium">LOGIN</span></button></div></div></div></header><main class="page-container relative z-10 flex-grow desktop-width-wrapper mt-20 pb-50px"><div id="srp" class=""><div class="mb-30"><h4 class="h4 mb-5">Ahmedabad Jn to Delhi Trains</h4><p class="body-sm text-secondary">5 Trains found between Ahmedabad Jn (ADI) to Delhi (NDLS)</p></div><div class="mb-20 rounded-[10px] bg-white"><div class="flex h-[60px] items-center"><div class="flex h-full flex-col items-center justify-center border-r border-gray-200 p-10 text-center"><p class="body-xs rotate-180 [writing-mode:vertical-lr]">May</p></div><div class="scrollbar-hide flex flex-1 gap-5 overflow-x-auto px-15" role="listbox" aria-label="Available dates"><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Tue, 21"><p class="body-sm  text-secondary">Tue, 21</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Wed, 22"><p class="body-sm  text-secondary">Wed, 22</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Thu, 23"><p class="body-sm  text-secondary">Thu, 23</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Fri, 24"><p class="body-sm  text-secondary">Fri, 24</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Sat, 25"><p class="body-sm  text-secondary">Sat, 25</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Sun, 26"><p class="body-sm  text-secondary">Sun, 26</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Mon, 27"><p class="body-sm  text-secondary">Mon, 27</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Tue, 28"><p class="body-sm  text-secondary">Tue, 28</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Wed, 29"><p class="body-sm  text-secondary">Wed, 29</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Thu, 30"><p class="body-sm  text-secondary">Thu, 30</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Fri, 01"><p class="body-sm  text-secondary">Fri, 01</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Sat, 02"><p class="body-sm  text-secondary">Sat, 02</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 border-b-4 border-b-subbrand-500" role="option" aria-selected="true" aria-label="Sun, 03"><p class="body-sm  text-brand">Sun, 03</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Mon, 04"><p class="body-sm  text-secondary">Mon, 04</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Tue, 05"><p class="body-sm  text-secondary">Tue, 05</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Wed, 06"><p class="body-sm  text-secondary">Wed, 06</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Thu, 07"><p class="body-sm  text-secondary">Thu, 07</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Fri, 08"><p class="body-sm  text-secondary">Fri, 08</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Sat, 09"><p class="body-sm  text-secondary">Sat, 09</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Sun, 10"><p class="body-sm  text-secondary">Sun, 10</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Mon, 11"><p class="body-sm  text-secondary">Mon, 11</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Tue, 12"><p class="body-sm  text-secondary">Tue, 12</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Wed, 13"><p class="body-sm  text-secondary">Wed, 13</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Thu, 14"><p class="body-sm  text-secondary">Thu, 14</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Fri, 15"><p class="body-sm  text-secondary">Fri, 15</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button><button class="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-2.5 pl-5px pr-5px flex min-w-80 cursor-pointer flex-col items-center rounded-none !px-5 !py-10 text-sm transition-all duration-200 " role="option" aria-selected="false" aria-label="Sat, 16"><p class="body-sm  text-secondary">Sat, 16</p><div class="flex items-center justify-center"><div class="mr-[2px] h-1.5 w-1.5 rounded-full" style="background: rgb(150, 91, 2);"></div><p class="body-xs" style="color: rgb(150, 91, 2);">Few Seats</p></div></button></div><div class="flex h-full items-center justify-center border-l border-gray-200 px-10"><button aria-label="Open calendar" class="border-0 bg-transparent p-0 cursor-pointer"><svg width="1em" height="1em" font-size="1.5rem" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-testid="CalendarIcon" class="h-[24px] w-[24px]" style="user-select: none; display: inline-block;"><path d="M8.0313 9.25a.75.75 0 0 0 0 1.5h8.0312a.75.75 0 0 0 0-1.5z"></path><path fill-rule="evenodd" d="M8.7813 4.75a.75.75 0 0 0-1.5 0v.2188H7c-1.6569 0-3 1.3431-3 3V17c0 1.6568 1.3431 3 3 3h10c1.6569 0 3-1.3432 3-3V7.9688c0-1.6569-1.3431-3-3-3h-.4062V4.75a.75.75 0 0 0-1.5 0v.2188H8.7813zm6.3125 1.875v-.1562H8.7813v.1562a.75.75 0 0 1-1.5 0v-.1562H7c-.8284 0-1.5.6715-1.5 1.5V17c0 .8284.6716 1.5 1.5 1.5h10c.8284 0 1.5-.6716 1.5-1.5V7.9688c0-.8285-.6716-1.5-1.5-1.5h-.4062v.1562a.75.75 0 0 1-1.5 0" clip-rule="evenodd"></path></svg></button></div></div><div class="flex items-center justify-between gap-20 border-t border-gray-200 px-20 py-15"><p class="body-md font-medium">Quick Filters</p><div class="flex items-center gap-20"><div class="flex items-center gap-5"><span class="relative shrink-0 inline-flex items-center justify-center rounded-full group/switch"><span class="relative rounded-full transition flex p-[1px] w-30 bg-dark"><span class="bg-primary rounded-full inline-flex items-center transition-all w-15 h-15 text-secondary group-hover/switch:bg-primary-over translate-x-0"></span></span><input class="absolute opacity-0 w-full h-full inset-0 cursor-pointer" type="checkbox" value="undefined"></span><p class="body-sm text-sm text-neutral-500">Best Available</p></div><div class="flex items-center gap-5"><span class="relative shrink-0 inline-flex items-center justify-center rounded-full group/switch"><span class="relative rounded-full transition flex p-[1px] w-30 bg-dark"><span class="bg-primary rounded-full inline-flex items-center transition-all w-15 h-15 text-secondary group-hover/switch:bg-primary-over translate-x-0"></span></span><input class="absolute opacity-0 w-full h-full inset-0 cursor-pointer" type="checkbox" value="undefined"></span><p class="body-sm text-sm text-neutral-500">AC Only</p></div></div></div></div><div class="mb-20 mt-20 rounded-10" id="train-card-list"><label for="fc-checkbox" class="flex cursor-pointer items-center justify-between bg-success-solid p-15 mb-20 h-[85px] rounded-10 px-20 py-15" style='background-image: url("https://cdn.confirmtkt.com/img/travel_guarantee/9756a1ba44946cf5b25e475de217821d.webp"); background-repeat: round;'><div class="flex items-center"><span class="relative shrink-0 inline-flex items-center justify-center w-20 h-20 rounded hover:bg-primary-over border border-primary mr-10 border-white hover:bg-transparent"><input id="fc-checkbox" class="absolute opacity-0 w-full h-full inset-0 cursor-pointer" type="checkbox"></span><div><span class="body-lg block text-white font-medium">Free Cancellation</span><p class="body-xs text-white">Get full refund of your train fare on cancellation *</p></div></div></label><div class="border-b border-tertiary bg-primary mb-20 rounded-10" id="train-20937"><div class="pt-15 px-15 pb-0"><div class="flex justify-between"><div class="body-sm max-w-[215px] truncate text-neutral-800"><span class="mr-5">20937</span>Pbr Dee Express</div><div class="flex justify-between gap-10"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="opacity-30 grayscale"><path d="M11.3138 8.64722C12.2344 9.0974 13.5704 8.77427 14.5577 7.78699C15.7279 6.61679 15.965 4.95669 15.0874 4.07905C14.2097 3.2014 12.5496 3.43856 11.3794 4.60875C10.3921 5.59604 10.069 6.93205 10.5192 7.85266L4.05443 14.3174C3.83502 14.5368 3.83502 14.8926 4.05443 15.112C4.27384 15.3314 4.62958 15.3314 4.84899 15.112L11.3138 8.64722Z" fill="var(--icon-primary-color)"></path><path d="M2.54713 5.27089C2.32772 5.4903 2.32772 5.84604 2.54713 6.06545L4.76468 8.28301C5.50132 9.01965 6.62212 9.138 7.4822 8.63806L8.0783 9.23416L8.87286 8.4396L8.28222 7.84896C8.8003 6.98549 8.6872 5.84905 7.94292 5.10477L5.72536 2.88721C5.50595 2.6678 5.15021 2.6678 4.9308 2.88721C4.71139 3.10663 4.71139 3.46236 4.9308 3.68177L7.14836 5.89933C7.58718 6.33815 7.58718 7.04962 7.14836 7.48845C6.70954 7.92727 5.99806 7.92727 5.55924 7.48845L3.34169 5.27089C3.12227 5.05148 2.76654 5.05148 2.54713 5.27089Z" fill="var(--icon-primary-color)"></path><path d="M9.40256 8.9693L10.1971 9.76386L9.40256 10.5584L8.60801 9.76386L9.40256 8.9693Z" fill="var(--icon-primary-color)"></path><path d="M9.93227 11.0881L10.7268 10.2936L14.7514 14.3181C14.9708 14.5376 14.9708 14.8933 14.7514 15.1127C14.532 15.3321 14.1763 15.3321 13.9568 15.1127L9.93227 11.0881Z" fill="var(--icon-primary-color)"></path><path d="M6.47718 6.83848C6.25777 7.05789 5.90203 7.05789 5.68262 6.83848L3.74908 4.90494C3.52967 4.68553 3.52967 4.32979 3.74908 4.11038C3.9685 3.89097 4.32423 3.89097 4.54364 4.11038L6.47718 6.04392C6.69659 6.26333 6.69659 6.61907 6.47718 6.83848Z" fill="var(--icon-primary-color)"></path></svg><div class="text-primary border-neutral-outline min-h-20 icon-sm body-xs inline-flex items-center font-normal rounded-full px-px border border-solid !border-neutral-100"><svg width="15" height="15" font-size="1.5rem" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-testid="StarIcon" style="user-select: none; display: inline-block;"><path fill-rule="evenodd" d="M10.7506 3.9473c.3932-1.263 2.1056-1.263 2.4988 0l1.519 4.8784h4.9154c1.2726 0 1.8017 1.6994.7721 2.4801l-3.9766 3.015 1.5189 4.8784c.3933 1.2631-.992 2.3134-2.0216 1.5328L12 17.7169 8.0234 20.732c-1.0296.7806-2.415-.2697-2.0216-1.5328l1.5189-4.8784-3.9766-3.015c-1.0296-.7807-.5005-2.48.7721-2.48h4.9154zM12 5.0093l-1.3816 4.4373c-.1759.5649-.6803.9473-1.2494.9473H4.898l3.617 2.7424c.4605.3491.6532.9679.4773 1.5328l-1.3816 4.4373 3.6171-2.7424c.4605-.3491 1.0839-.3491 1.5444 0l3.6171 2.7424-1.3816-4.4373c-.1759-.5649.0168-1.1837.4772-1.5328l3.6171-2.7424h-4.471c-.5691 0-1.0735-.3824-1.2494-.9473z" clip-rule="evenodd"></path></svg><span class="first:pl-5px last:pr-5px"><span class="body-xs">4.1</span></span></div></div></div><div class="body-sm mt-5 flex items-center justify-between text-neutral-800"><div class="flex-start flex items-start text-center"><div class="body-sm text-left font-medium">04:10 CLDY </div><div class="flex items-center pt-[2px]"><div class="ml-5 h-5 w-5 rounded-full bg-neutral-200"></div><div class="mr-5 h-[1px] w-5 bg-neutral-200"></div><p class="body-xs inline-block text-secondary">15h 20m</p><div class="ml-5 h-[1px] w-5 bg-neutral-200"></div><div class="mr-5 h-5 w-5 rounded-full bg-neutral-200"></div></div><div class="body-sm text-left font-medium">19:30 DEE </div></div><button class="body-xs text-secondary underline">Schedule</button></div></div><div class="flex gap-[12px] overflow-auto px-15 pb-15 pt-10"><div data-key="SL" class="_cache-card-wrapper_662zq_5"><p class="body-xs _cache-time_662zq_98">12 mins ago</p><div class="_avail-card_662zq_11 border border-critical-subtle bg-critical-subtle hover:bg-critical-subtle text-critical"><div class="body-xs mb-5 flex items-center justify-between font-medium text-neutral-800"><div><span>SL</span></div><span class="body-xs text-[length:inherit] "> ₹515</span></div><div class="text-critical"><div class="body-sm font-medium _prediction-text_662zq_115 text-critical">Regret</div><div class="flex items-center "><div class="body-xs truncate text-critical">No more booking</div></div></div></div></div><div data-key="3A" class="_cache-card-wrapper_662zq_5"><p class="body-xs _cache-time_662zq_98">1 min ago</p><div class="_avail-card_662zq_11 border border-critical-subtle bg-critical-subtle hover:bg-critical-subtle text-critical"><div class="body-xs mb-5 flex items-center justify-between font-medium text-neutral-800"><div><span>3A</span></div><span class="body-xs text-[length:inherit] "> ₹1325</span></div><div class="text-critical"><div class="body-sm font-medium _prediction-text_662zq_115 text-critical">Regret</div><div class="flex items-center "><div class="body-xs truncate text-critical">No more booking</div></div></div></div></div><div data-key="2A" class="_cache-card-wrapper_662zq_5"><p class="body-xs _cache-time_662zq_98">59 mins ago</p><div class="_avail-card_662zq_11 border border-critical-subtle bg-critical-subtle hover:bg-critical-subtle text-critical"><div class="body-xs mb-5 flex items-center justify-between font-medium text-neutral-800"><div><span>2A</span></div><span class="body-xs text-[length:inherit] "> ₹1865</span></div><div class="text-critical"><div class="body-sm font-medium _prediction-text_662zq_115 text-critical">Regret</div><div class="flex items-center "><div class="body-xs truncate text-critical">No more booking</div></div></div></div></div><div data-key="1A" class="_cache-card-wrapper_662zq_5"><p class="body-xs _cache-time_662zq_98">1 hr ago</p><div class="_avail-card_662zq_11 border border-critical-subtle bg-critical-subtle hover:bg-critical-subtle text-critical"><div class="body-xs mb-5 flex items-center justify-between font-medium text-neutral-800"><div><span>1A</span></div><span class="body-xs text-[length:inherit] "> ₹3110</span></div><div class="text-critical"><div class="body-sm font-medium _prediction-text_662zq_115 text-critical">Regret</div><div class="flex items-center "><div class="body-xs truncate text-critical">No more booking</div></div></div></div></div></div></div><div class="mx-auto mb-20 text-center"><div class="overflow-hidden rounded-20 leading-none"><div class="_lottie-container_1gzyv_1"><canvas width="1093" height="341" style="width: 100%; height: 100%;"></canvas></div></div></div><div class="border-b border-tertiary bg-primary mb-20 rounded-10" id="train-19031"><div class="pt-15 px-15 pb-0"><div class="flex justify-between"><div class="body-sm max-w-[215px] truncate text-neutral-800"><span class="mr-5">19031</span>Yoga Express</div><div class="flex justify-between gap-10"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" class=""><path d="M11.3138 8.64722C12.2344 9.0974 13.5704 8.77427 14.5577 7.78699C15.7279 6.61679 15.965 4.95669 15.0874 4.07905C14.2097 3.2014 12.5496 3.43856 11.3794 4.60875C10.3921 5.59604 10.069 6.93205 10.5192 7.85266L4.05443 14.3174C3.83502 14.5368 3.83502 14.8926 4.05443 15.112C4.27384 15.3314 4.62958 15.3314 4.84899 15.112L11.3138 8.64722Z" fill="var(--icon-primary-color)"></path><path d="M2.54713 5.27089C2.32772 5.4903 2.32772 5.84604 2.54713 6.06545L4.76468 8.28301C5.50132 9.01965 6.62212 9.138 7.4822 8.63806L8.0783 9.23416L8.87286 8.4396L8.28222 7.84896C8.8003 6.98549 8.6872 5.84905 7.94292 5.10477L5.72536 2.88721C5.50595 2.6678 5.15021 2.6678 4.9308 2.88721C4.71139 3.10663 4.71139 3.46236 4.9308 3.68177L7.14836 5.89933C7.58718 6.33815 7.58718 7.04962 7.14836 7.48845C6.70954 7.92727 5.99806 7.92727 5.55924 7.48845L3.34169 5.27089C3.12227 5.05148 2.76654 5.05148 2.54713 5.27089Z" fill="var(--icon-primary-color)"></path><path d="M9.40256 8.9693L10.1971 9.76386L9.40256 10.5584L8.60801 9.76386L9.40256 8.9693Z" fill="var(--icon-primary-color)"></path><path d="M9.93227 11.0881L10.7268 10.2936L14.7514 14.3181C14.9708 14.5376 14.9708 14.8933 14.7514 15.1127C14.532 15.3321 14.1763 15.3321 13.9568 15.1127L9.93227 11.0881Z" fill="var(--icon-primary-color)"></path><path d="M6.47718 6.83848C6.25777 7.05789 5.90203 7.05789 5.68262 6.83848L3.74908 4.90494C3.52967 4.68553 3.52967 4.32979 3.74908 4.11038C3.9685 3.89097 4.32423 3.89097 4.54364 4.11038L6.47718 6.04392C6.69659 6.26333 6.69659 6.61907 6.47718 6.83848Z" fill="var(--icon-primary-color)"></path></svg><div class="text-primary border-neutral-outline min-h-20 icon-sm body-xs inline-flex items-center font-normal rounded-full px-px border border-solid !border-neutral-100"><svg width="15" height="15" font-size="1.5rem" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-testid="StarIcon" style="user-select: none; display: inline-block;"><path fill-rule="evenodd" d="M10.7506 3.9473c.3932-1.263 2.1056-1.263 2.4988 0l1.519 4.8784h4.9154c1.2726 0 1.8017 1.6994.7721 2.4801l-3.9766 3.015 1.5189 4.8784c.3933 1.2631-.992 2.3134-2.0216 1.5328L12 17.7169 8.0234 20.732c-1.0296.7806-2.415-.2697-2.0216-1.5328l1.5189-4.8784-3.9766-3.015c-1.0296-.7807-.5005-2.48.7721-2.48h4.9154zM12 5.0093l-1.3816 4.4373c-.1759.5649-.6803.9473-1.2494.9473H4.898l3.617 2.7424c.4605.3491.6532.9679.4773 1.5328l-1.3816 4.4373 3.6171-2.7424c.4605-.3491 1.0839-.3491 1.5444 0l3.6171 2.7424-1.3816-4.4373c-.1759-.5649.0168-1.1837.4772-1.5328l3.6171-2.7424h-4.471c-.5691 0-1.0735-.3824-1.2494-.9473z" clip-rule="evenodd"></path></svg><span class="first:pl-5px last:pr-5px"><span class="body-xs">4.0</span></span></div></div></div><div class="body-sm mt-5 flex items-center justify-between text-neutral-800"><div class="flex-start flex items-start text-center"><div class="body-sm text-left font-medium">11:25 SBIB </div><div class="flex items-center pt-[2px]"><div class="ml-5 h-5 w-5 rounded-full bg-neutral-200"></div><div class="mr-5 h-[1px] w-5 bg-neutral-200"></div><p class="body-xs inline-block text-secondary">17h 54m</p><div class="ml-5 h-[1px] w-5 bg-neutral-200"></div><div class="mr-5 h-5 w-5 rounded-full bg-neutral-200"></div></div><div class="body-sm text-left font-medium">05:19 DSA </div></div><button class="body-xs text-secondary underline">Schedule</button></div></div><div class="flex gap-[12px] overflow-auto px-15 pb-15 pt-10"><div data-key="SL" class="_cache-card-wrapper_662zq_5"><p class="body-xs _cache-time_662zq_98">57 mins ago</p><div class="_avail-card_662zq_11 border border-critical-subtle bg-critical-subtle hover:bg-critical-subtle text-critical"><div class="body-xs mb-5 flex items-center justify-between font-medium text-neutral-800"><div><span>SL</span></div><span class="body-xs text-[length:inherit] "> ₹500</span></div><div class="text-critical"><div class="body-sm font-medium _prediction-text_662zq_115 text-critical">Regret</div><div class="flex items-center "><div class="body-xs truncate text-critical">No more booking</div></div></div></div></div><div data-key="3E" class="_cache-card-wrapper_662zq_5"><p class="body-xs _cache-time_662zq_98">34 mins ago</p><div class="_avail-card_662zq_11 border border-critical-subtle bg-critical-subtle hover:bg-critical-subtle text-critical"><div class="body-xs mb-5 flex items-center justify-between font-medium text-neutral-800"><div><span>3E</span></div><span class="body-xs text-[length:inherit] "> ₹1210</span></div><div class="text-critical"><div class="body-sm font-medium _prediction-text_662zq_115 text-critical">Regret</div><div class="flex items-center "><div class="body-xs truncate text-critical">No more booking</div></div></div></div></div><div data-key="3A" class="_cache-card-wrapper_662zq_5"><p class="body-xs _cache-time_662zq_98">2 hrs ago</p><div class="_avail-card_662zq_11 border border-critical-subtle bg-critical-subtle hover:bg-critical-subtle text-critical"><div class="body-xs mb-5 flex items-center justify-between font-medium text-neutral-800"><div><span>3A</span></div><span class="body-xs text-[length:inherit] "> ₹1305</span></div><div class="text-critical"><div class="body-sm font-medium _prediction-text_662zq_115 text-critical">Regret</div><div class="flex items-center "><div class="body-xs truncate text-critical">No more booking</div></div></div></div></div><div data-key="2A" class="_cache-card-wrapper_662zq_5"><p class="body-xs _cache-time_662zq_98">3 hrs ago</p><div class="_avail-card_662zq_11 border border-critical-subtle bg-critical-subtle hover:bg-critical-subtle text-critical"><div class="body-xs mb-5 flex items-center justify-between font-medium text-neutral-800"><div><span>2A</span></div><span class="body-xs text-[length:inherit] "> ₹1855</span></div><div class="text-critical"><div class="body-sm font-medium _prediction-text_662zq_115 text-critical">Regret</div><div class="flex items-center "><div class="body-xs truncate text-critical">No more booking</div></div></div></div></div><div data-key="1A" class="_cache-card-wrapper_662zq_5"><p class="body-xs _cache-time_662zq_98">4 hrs ago</p><div class="_avail-card_662zq_11 border border-critical-subtle bg-critical-subtle hover:bg-critical-subtle text-critical"><div class="body-xs mb-5 flex items-center justify-between font-medium text-neutral-800"><div><span>1A</span></div><span class="body-xs text-[length:inherit] "> ₹3100</span></div><div class="text-critical"><div class="body-sm font-medium _prediction-text_662zq_115 text-critical">Regret</div><div class="flex items-center "><div class="body-xs truncate text-critical">No more booking</div></div></div></div></div></div></div><div class="border-b border-tertiary bg-primary mb-20 rounded-10" id="train-12216"><div class="pt-15 px-15 pb-0"><div class="flex justify-between"><div class="body-sm max-w-[215px] truncate text-neutral-800"><span class="mr-5">12216</span>Dee Garibrath</div><div class="flex justify-between gap-10"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" class=""><path d="M11.3138 8.64722C12.2344 9.0974 13.5704 8.77427 14.5577 7.78699C15.7279 6.61679 15.965 4.95669 15.0874 4.07905C14.2097 3.2014 12.5496 3.43856 11.3794 4.60875C10.3921 5.59604 10.069 6.93205 10.5192 7.85266L4.05443 14.3174C3.83502 14.5368 3.83502 14.8926 4.05443 15.112C4.27384 15.3314 4.62958 15.3314 4.84899 15.112L11.3138 8.64722Z" fill="var(--icon-primary-color)"></path><path d="M2.54713 5.27089C2.32772 5.4903 2.32772 5.84604 2.54713 6.06545L4.76468 8.28301C5.50132 9.01965 6.62212 9.138 7.4822 8.63806L8.0783 9.23416L8.87286 8.4396L8.28222 7.84896C8.8003 6.98549 8.6872 5.84905 7.94292 5.10477L5.72536 2.88721C5.50595 2.6678 5.15021 2.6678 4.9308 2.88721C4.71139 3.10663 4.71139 3.46236 4.9308 3.68177L7.14836 5.89933C7.58718 6.33815 7.58718 7.04962 7.14836 7.48845C6.70954 7.92727 5.99806 7.92727 5.55924 7.48845L3.34169 5.27089C3.12227 5.05148 2.76654 5.05148 2.54713 5.27089Z" fill="var(--icon-primary-color)"></path><path d="M9.40256 8.9693L10.1971 9.76386L9.40256 10.5584L8.60801 9.76386L9.40256 8.9693Z" fill="var(--icon-primary-color)"></path><path d="M9.93227 11.0881L10.7268 10.2936L14.7514 14.3181C14.9708 14.5376 14.9708 14.8933 14.7514 15.1127C14.532 15.3321 14.1763 15.3321 13.9568 15.1127L9.93227 11.0881Z" fill="var(--icon-primary-color)"></path><path d="M6.47718 6.83848C6.25777 7.05789 5.90203 7.05789 5.68262 6.83848L3.74908 4.90494C3.52967 4.68553 3.52967 4.32979 3.74908 4.11038C3.9685 3.89097 4.32423 3.89097 4.54364 4.11038L6.47718 6.04392C6.69659 6.26333 6.69659 6.61907 6.47718 6.83848Z" fill="var(--icon-primary-color)"></path></svg><div class="text-primary border-neutral-outline min-h-20 icon-sm body-xs inline-flex items-center font-normal rounded-full px-px border border-solid !border-neutral-100"><svg width="15" height="15" font-size="1.5rem" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-testid="StarIcon" style="user-select: none; display: inline-block;"><path fill-rule="evenodd" d="M10.7506 3.9473c.3932-1.263 2.1056-1.263 2.4988 0l1.519 4.8784h4.9154c1.2726 0 1.8017 1.6994.7721 2.4801l-3.9766 3.015 1.5189 4.8784c.3933 1.2631-.992 2.3134-2.0216 1.5328L12 17.7169 8.0234 20.732c-1.0296.7806-2.415-.2697-2.0216-1.5328l1.5189-4.8784-3.9766-3.015c-1.0296-.7807-.5005-2.48.7721-2.48h4.9154zM12 5.0093l-1.3816 4.4373c-.1759.5649-.6803.9473-1.2494.9473H4.898l3.617 2.7424c.4605.3491.6532.9679.4773 1.5328l-1.3816 4.4373 3.6171-2.7424c.4605-.3491 1.0839-.3491 1.5444 0l3.6171 2.7424-1.3816-4.4373c-.1759-.5649.0168-1.1837.4772-1.5328l3.6171-2.7424h-4.471c-.5691 0-1.0735-.3824-1.2494-.9473z" clip-rule="evenodd"></path></svg><span class="first:pl-5px last:pr-5px"><span class="body-xs">4.1</span></span></div></div></div><div class="body-sm mt-5 flex items-center justify-between text-neutral-800"><div class="flex-start flex items-start text-center"><div class="body-sm text-left font-medium">19:00 ADI </div><div class="flex items-center pt-[2px]"><div class="ml-5 h-5 w-5 rounded-full bg-neutral-200"></div><div class="mr-5 h-[1px] w-5 bg-neutral-200"></div><p class="body-xs inline-block text-secondary">16h 0m</p><div class="ml-5 h-[1px] w-5 bg-neutral-200"></div><div class="mr-5 h-5 w-5 rounded-full bg-neutral-200"></div></div><div class="body-sm text-left font-medium">11:00 DEE </div></div><button class="body-xs text-secondary underline">Schedule</button></div></div><div id="tg-available-row" class="flex gap-[12px] overflow-auto px-15 pb-15 pt-10"><div data-key="3A" class="_cache-card-wrapper_662zq_5"><p class="body-xs _cache-time_662zq_98">1 min ago</p><div class="_avail-card_662zq_11 border border-success-subtle bg-success-subtle hover:bg-success-subtle text-success-subtle"><div class="body-xs mb-5 flex items-center justify-between font-medium text-neutral-800"><div><span>3A</span></div><span class="body-xs text-[length:inherit] "> ₹965</span></div><div class="text-success-subtle"><div class="flex w-fit items-center rounded-15 pr-5 _tg-chip_662zq_110"><p class="body-sm truncate text-success-subtle font-medium">WL 62</p><img class="ml-1" alt="tg-icon" height="18" width="15" src="https://images.ixigo.com/image/upload/trains/trains/47e70b2f7cbacbb254c0895c3a9115c5-mvwlp.png"></div><div class="flex items-center travel-guarantee"><div class="body-xs truncate text-success-subtle"><p class="body-sm _tg-chip_nk1ka_1 font-medium">Confirm or 3X Refund*</p>Waitlist</div></div></div></div></div></div></div><div class="border-b border-tertiary bg-primary mb-20 rounded-10" id="train-12957"><div class="pt-15 px-15 pb-0"><div class="flex justify-between"><div class="body-sm max-w-[215px] truncate text-neutral-800"><span class="mr-5">12957</span>Sbib Ndls Raj</div><div class="flex justify-between gap-10"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="opacity-30 grayscale"><path d="M11.3138 8.64722C12.2344 9.0974 13.5704 8.77427 14.5577 7.78699C15.7279 6.61679 15.965 4.95669 15.0874 4.07905C14.2097 3.2014 12.5496 3.43856 11.3794 4.60875C10.3921 5.59604 10.069 6.93205 10.5192 7.85266L4.05443 14.3174C3.83502 14.5368 3.83502 14.8926 4.05443 15.112C4.27384 15.3314 4.62958 15.3314 4.84899 15.112L11.3138 8.64722Z" fill="var(--icon-primary-color)"></path><path d="M2.54713 5.27089C2.32772 5.4903 2.32772 5.84604 2.54713 6.06545L4.76468 8.28301C5.50132 9.01965 6.62212 9.138 7.4822 8.63806L8.0783 9.23416L8.87286 8.4396L8.28222 7.84896C8.8003 6.98549 8.6872 5.84905 7.94292 5.10477L5.72536 2.88721C5.50595 2.6678 5.15021 2.6678 4.9308 2.88721C4.71139 3.10663 4.71139 3.46236 4.9308 3.68177L7.14836 5.89933C7.58718 6.33815 7.58718 7.04962 7.14836 7.48845C6.70954 7.92727 5.99806 7.92727 5.55924 7.48845L3.34169 5.27089C3.12227 5.05148 2.76654 5.05148 2.54713 5.27089Z" fill="var(--icon-primary-color)"></path><path d="M9.40256 8.9693L10.1971 9.76386L9.40256 10.5584L8.60801 9.76386L9.40256 8.9693Z" fill="var(--icon-primary-color)"></path><path d="M9.93227 11.0881L10.7268 10.2936L14.7514 14.3181C14.9708 14.5376 14.9708 14.8933 14.7514 15.1127C14.532 15.3321 14.1763 15.3321 13.9568 15.1127L9.93227 11.0881Z" fill="var(--icon-primary-color)"></path><path d="M6.47718 6.83848C6.25777 7.05789 5.90203 7.05789 5.68262 6.83848L3.74908 4.90494C3.52967 4.68553 3.52967 4.32979 3.74908 4.11038C3.9685 3.89097 4.32423 3.89097 4.54364 4.11038L6.47718 6.04392C6.69659 6.26333 6.69659 6.61907 6.47718 6.83848Z" fill="var(--icon-primary-color)"></path></svg><div class="text-primary border-neutral-outline min-h-20 icon-sm body-xs inline-flex items-center font-normal rounded-full px-px border border-solid !border-neutral-100"><svg width="15" height="15" font-size="1.5rem" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-testid="StarIcon" style="user-select: none; display: inline-block;"><path fill-rule="evenodd" d="M10.7506 3.9473c.3932-1.263 2.1056-1.263 2.4988 0l1.519 4.8784h4.9154c1.2726 0 1.8017 1.6994.7721 2.4801l-3.9766 3.015 1.5189 4.8784c.3933 1.2631-.992 2.3134-2.0216 1.5328L12 17.7169 8.0234 20.732c-1.0296.7806-2.415-.2697-2.0216-1.5328l1.5189-4.8784-3.9766-3.015c-1.0296-.7807-.5005-2.48.7721-2.48h4.9154zM12 5.0093l-1.3816 4.4373c-.1759.5649-.6803.9473-1.2494.9473H4.898l3.617 2.7424c.4605.3491.6532.9679.4773 1.5328l-1.3816 4.4373 3.6171-2.7424c.4605-.3491 1.0839-.3491 1.5444 0l3.6171 2.7424-1.3816-4.4373c-.1759-.5649.0168-1.1837.4772-1.5328l3.6171-2.7424h-4.471c-.5691 0-1.0735-.3824-1.2494-.9473z" clip-rule="evenodd"></path></svg><span class="first:pl-5px last:pr-5px"><span class="body-xs">4.1</span></span></div></div></div><div class="body-sm mt-5 flex items-center justify-between text-neutral-800"><div class="flex-start flex items-start text-center"><div class="body-sm text-left font-medium">19:20 SBIB </div><div class="flex items-center pt-[2px]"><div class="ml-5 h-5 w-5 rounded-full bg-neutral-200"></div><div class="mr-5 h-[1px] w-5 bg-neutral-200"></div><p class="body-xs inline-block text-secondary">12h 10m</p><div class="ml-5 h-[1px] w-5 bg-neutral-200"></div><div class="mr-5 h-5 w-5 rounded-full bg-neutral-200"></div></div><div class="body-sm text-left font-medium">07:30 NDLS </div></div><button class="body-xs text-secondary underline">Schedule</button></div></div><div id="tg-available-row" class="flex gap-[12px] overflow-auto px-15 pb-15 pt-10"><div data-key="3A" class="_cache-card-wrapper_662zq_5"><p class="body-xs _cache-time_662zq_98">35 mins ago</p><div class="_avail-card_662zq_11 border border-warning-subtle bg-warning-subtle hover:bg-warning-subtle text-warning-500"><div class="body-xs mb-5 flex items-center justify-between font-medium text-neutral-800"><div><span>3A</span></div><span class="body-xs text-[length:inherit] "> ₹2355</span></div><div class="text-warning-500"><div class="body-sm font-medium _prediction-text_662zq_115 text-warning-500">WL 120</div><div class="flex items-center "><div class="body-xs truncate text-warning-500">46% Chance</div></div></div></div></div><div data-key="2A" class="_cache-card-wrapper_662zq_5"><p class="body-xs _cache-time_662zq_98">5 mins ago</p><div class="_avail-card_662zq_11 border border-success-subtle bg-success-subtle hover:bg-success-subtle text-success-subtle"><div class="body-xs mb-5 flex items-center justify-between font-medium text-neutral-800"><div><span>2A</span></div><span class="body-xs text-[length:inherit] "> ₹3200</span></div><div class="text-success-subtle"><div class="flex w-fit items-center rounded-15 pr-5 _tg-chip_662zq_110"><p class="body-sm truncate text-success-subtle font-medium">WL 52</p><img class="ml-1" alt="tg-icon" height="18" width="15" src="https://images.ixigo.com/image/upload/trains/trains/47e70b2f7cbacbb254c0895c3a9115c5-mvwlp.png"></div><div class="flex items-center travel-guarantee"><div class="body-xs truncate text-success-subtle"><p class="body-sm _tg-chip_nk1ka_1 font-medium">Confirm or 3X Refund*</p>Waitlist</div></div></div></div></div><div data-key="1A" class="_cache-card-wrapper_662zq_5"><p class="body-xs _cache-time_662zq_98">1 hr ago</p><div class="_avail-card_662zq_11 border border-critical-subtle bg-critical-subtle hover:bg-critical-subtle text-critical"><div class="body-xs mb-5 flex items-center justify-between font-medium text-neutral-800"><div><span>1A</span></div><span class="body-xs text-[length:inherit] "> ₹3945</span></div><div class="text-critical"><div class="body-sm font-medium _prediction-text_662zq_115 text-critical">Regret</div><div class="flex items-center "><div class="body-xs truncate text-critical">No more booking</div></div></div></div></div></div></div><div class="border-b border-tertiary bg-primary mb-20 rounded-10" id="train-12915"><div class="pt-15 px-15 pb-0"><div class="flex justify-between"><div class="body-sm max-w-[215px] truncate text-neutral-800"><span class="mr-5">12915</span>Ashram Express</div><div class="flex justify-between gap-10"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" class=""><path d="M11.3138 8.64722C12.2344 9.0974 13.5704 8.77427 14.5577 7.78699C15.7279 6.61679 15.965 4.95669 15.0874 4.07905C14.2097 3.2014 12.5496 3.43856 11.3794 4.60875C10.3921 5.59604 10.069 6.93205 10.5192 7.85266L4.05443 14.3174C3.83502 14.5368 3.83502 14.8926 4.05443 15.112C4.27384 15.3314 4.62958 15.3314 4.84899 15.112L11.3138 8.64722Z" fill="var(--icon-primary-color)"></path><path d="M2.54713 5.27089C2.32772 5.4903 2.32772 5.84604 2.54713 6.06545L4.76468 8.28301C5.50132 9.01965 6.62212 9.138 7.4822 8.63806L8.0783 9.23416L8.87286 8.4396L8.28222 7.84896C8.8003 6.98549 8.6872 5.84905 7.94292 5.10477L5.72536 2.88721C5.50595 2.6678 5.15021 2.6678 4.9308 2.88721C4.71139 3.10663 4.71139 3.46236 4.9308 3.68177L7.14836 5.89933C7.58718 6.33815 7.58718 7.04962 7.14836 7.48845C6.70954 7.92727 5.99806 7.92727 5.55924 7.48845L3.34169 5.27089C3.12227 5.05148 2.76654 5.05148 2.54713 5.27089Z" fill="var(--icon-primary-color)"></path><path d="M9.40256 8.9693L10.1971 9.76386L9.40256 10.5584L8.60801 9.76386L9.40256 8.9693Z" fill="var(--icon-primary-color)"></path><path d="M9.93227 11.0881L10.7268 10.2936L14.7514 14.3181C14.9708 14.5376 14.9708 14.8933 14.7514 15.1127C14.532 15.3321 14.1763 15.3321 13.9568 15.1127L9.93227 11.0881Z" fill="var(--icon-primary-color)"></path><path d="M6.47718 6.83848C6.25777 7.05789 5.90203 7.05789 5.68262 6.83848L3.74908 4.90494C3.52967 4.68553 3.52967 4.32979 3.74908 4.11038C3.9685 3.89097 4.32423 3.89097 4.54364 4.11038L6.47718 6.04392C6.69659 6.26333 6.69659 6.61907 6.47718 6.83848Z" fill="var(--icon-primary-color)"></path></svg><div class="text-primary border-neutral-outline min-h-20 icon-sm body-xs inline-flex items-center font-normal rounded-full px-px border border-solid !border-neutral-100"><svg width="15" height="15" font-size="1.5rem" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-testid="StarIcon" style="user-select: none; display: inline-block;"><path fill-rule="evenodd" d="M10.7506 3.9473c.3932-1.263 2.1056-1.263 2.4988 0l1.519 4.8784h4.9154c1.2726 0 1.8017 1.6994.7721 2.4801l-3.9766 3.015 1.5189 4.8784c.3933 1.2631-.992 2.3134-2.0216 1.5328L12 17.7169 8.0234 20.732c-1.0296.7806-2.415-.2697-2.0216-1.5328l1.5189-4.8784-3.9766-3.015c-1.0296-.7807-.5005-2.48.7721-2.48h4.9154zM12 5.0093l-1.3816 4.4373c-.1759.5649-.6803.9473-1.2494.9473H4.898l3.617 2.7424c.4605.3491.6532.9679.4773 1.5328l-1.3816 4.4373 3.6171-2.7424c.4605-.3491 1.0839-.3491 1.5444 0l3.6171 2.7424-1.3816-4.4373c-.1759-.5649.0168-1.1837.4772-1.5328l3.6171-2.7424h-4.471c-.5691 0-1.0735-.3824-1.2494-.9473z" clip-rule="evenodd"></path></svg><span class="first:pl-5px last:pr-5px"><span class="body-xs">4.1</span></span></div></div></div><div class="body-sm mt-5 flex items-center justify-between text-neutral-800"><div class="flex-start flex items-start text-center"><div class="body-sm text-left font-medium">19:45 SBIB </div><div class="flex items-center pt-[2px]"><div class="ml-5 h-5 w-5 rounded-full bg-neutral-200"></div><div class="mr-5 h-[1px] w-5 bg-neutral-200"></div><p class="body-xs inline-block text-secondary">14h 15m</p><div class="ml-5 h-[1px] w-5 bg-neutral-200"></div><div class="mr-5 h-5 w-5 rounded-full bg-neutral-200"></div></div><div class="body-sm text-left font-medium">10:00 DLI </div></div><button class="body-xs text-secondary underline">Schedule</button></div></div><div id="tg-available-row" class="flex gap-[12px] overflow-auto px-15 pb-15 pt-10"><div data-key="SL" class="_cache-card-wrapper_662zq_5"><p class="body-xs _cache-time_662zq_98">10 mins ago</p><div class="_avail-card_662zq_11 border border-success-subtle bg-success-subtle hover:bg-success-subtle text-success-subtle"><div class="body-xs mb-5 flex items-center justify-between font-medium text-neutral-800"><div><span>SL</span></div><span class="body-xs text-[length:inherit] "> ₹515</span></div><div class="text-success-subtle"><div class="flex w-fit items-center rounded-15 pr-5 _tg-chip_662zq_110"><p class="body-sm truncate text-success-subtle font-medium">WL 90</p><img class="ml-1" alt="tg-icon" height="18" width="15" src="https://images.ixigo.com/image/upload/trains/trains/47e70b2f7cbacbb254c0895c3a9115c5-mvwlp.png"></div><div class="flex items-center travel-guarantee"><div class="body-xs truncate text-success-subtle"><p class="body-sm _tg-chip_nk1ka_1 font-medium">Confirm or 3X Refund*</p>Waitlist</div></div></div></div></div><div data-key="3E" class="_cache-card-wrapper_662zq_5"><p class="body-xs _cache-time_662zq_98">11 mins ago</p><div class="_avail-card_662zq_11 border border-success-subtle bg-success-subtle hover:bg-success-subtle text-success-subtle"><div class="body-xs mb-5 flex items-center justify-between font-medium text-neutral-800"><div><span>3E</span></div><span class="body-xs text-[length:inherit] "> ₹1235</span></div><div class="text-success-subtle"><div class="flex w-fit items-center rounded-15 pr-5 _tg-chip_662zq_110"><p class="body-sm truncate text-success-subtle font-medium">WL 37</p><img class="ml-1" alt="tg-icon" height="18" width="15" src="https://images.ixigo.com/image/upload/trains/trains/47e70b2f7cbacbb254c0895c3a9115c5-mvwlp.png"></div><div class="flex items-center travel-guarantee"><div class="body-xs truncate text-success-subtle"><p class="body-sm _tg-chip_nk1ka_1 font-medium">Confirm or 3X Refund*</p>Waitlist</div></div></div></div></div><div data-key="3A" class="_cache-card-wrapper_662zq_5"><p class="body-xs _cache-time_662zq_98">2 mins ago</p><div class="_avail-card_662zq_11 border border-critical-subtle bg-critical-subtle hover:bg-critical-subtle text-critical"><div class="body-xs mb-5 flex items-center justify-between font-medium text-neutral-800"><div><span>3A</span></div><span class="body-xs text-[length:inherit] "> ₹1325</span></div><div class="text-critical"><div class="body-sm font-medium _prediction-text_662zq_115 text-critical">WL 88</div><div class="flex items-center "><div class="body-xs truncate text-critical">Low Chance</div></div></div></div></div><div data-key="2A" class="_cache-card-wrapper_662zq_5"><p class="body-xs _cache-time_662zq_98">3 hrs ago</p><div class="_avail-card_662zq_11 border border-success-subtle bg-success-subtle hover:bg-success-subtle text-success-subtle"><div class="body-xs mb-5 flex items-center justify-between font-medium text-neutral-800"><div><span>2A</span></div><span class="body-xs text-[length:inherit] "> ₹1865</span></div><div class="text-success-subtle"><div class="flex w-fit items-center rounded-15 pr-5 _tg-chip_662zq_110"><p class="body-sm truncate text-success-subtle font-medium">WL 30</p><img class="ml-1" alt="tg-icon" height="18" width="15" src="https://images.ixigo.com/image/upload/trains/trains/47e70b2f7cbacbb254c0895c3a9115c5-mvwlp.png"></div><div class="flex items-center travel-guarantee"><div class="body-xs truncate text-success-subtle"><p class="body-sm _tg-chip_nk1ka_1 font-medium">Confirm or 3X Refund*</p>Waitlist</div></div></div></div></div><div data-key="1A" class="_cache-card-wrapper_662zq_5"><p class="body-xs _cache-time_662zq_98">1 hr ago</p><div class="_avail-card_662zq_11 border border-success-subtle bg-success-subtle hover:bg-success-subtle text-success-subtle"><div class="body-xs mb-5 flex items-center justify-between font-medium text-neutral-800"><div><span>1A</span></div><span class="body-xs text-[length:inherit] "> ₹3110</span></div><div class="text-success-subtle"><div class="flex w-fit items-center rounded-15 pr-5 _tg-chip_662zq_110"><p class="body-sm truncate text-success-subtle font-medium">WL 5</p><img class="ml-1" alt="tg-icon" height="18" width="15" src="https://images.ixigo.com/image/upload/trains/trains/47e70b2f7cbacbb254c0895c3a9115c5-mvwlp.png"></div><div class="flex items-center travel-guarantee"><div class="body-xs truncate text-success-subtle"><p class="body-sm _tg-chip_nk1ka_1 font-medium">Confirm or 3X Refund*</p>Waitlist</div></div></div></div></div></div></div><div class="m-20 flex items-center justify-center"><img alt="IRCTC" width="24" height="24" class="mr-5" loading="lazy" src="https://www.confirmtkt.com/img/icons/ic-search-irctc.png"><span class="body-xs">IRCTC Authorised Partner</span></div></div></div></main></div></div>
+    <script>
+      try {
+        // different loader for pwa app environment
+        const isAppEnvironment =
+          window.webkit?.messageHandlers || window.HTMLOUT
+
+        if (isAppEnvironment) {
+          const splashScreen = document.getElementById('splash-screen')
+          splashScreen.style.background = '#fff'
+          splashScreen.style.paddingTop = '0px'
+          splashScreen.style.justifyContent = 'center'
+          splashScreen.innerHTML = `
+              <div style="
+                  position: relative;
+                  display: flex;
+                  justify-content: center;
+                  color: #fff;
+                  height: 100vh;
+                  align-items: center;">
+                <div>
+                  <svg
+                    class="-rotate-90"
+                    data-testid="circularProgress"
+                    style="width: 40px; height: 40px">
+                    <circle
+                      cx="20"
+                      cy="20"
+                      fill="transparent"
+                      r="17"
+                      stroke="rgb(200 202 208 / 1)"
+                      class=""
+                      stroke-width="3"
+                      data-testid="track"
+                    ></circle>
+                    <circle
+                      class="loader-new"
+                      cx="20"
+                      cy="20"
+                      fill="transparent"
+                      r="17"
+                      stroke-width="3"
+                      stroke-dasharray="106.81415022205297"
+                      stroke-dashoffset="80.111"
+                      stroke-linecap="round"
+                      data-testid="progress"
+                    ></circle>
+                  </svg>
+                  <div style="color: #000; font-size: 18px; margin-top: 10px">
+                    Loading... Please Wait
+                  </div>
+                </div>
+              </div>`
+        }
+      } catch (error) {
+        console.log('Error in splash screen detection:', error)
+      }
+    </script><script>
+      window.addEventListener('vite:preloadError', event => {
+        window.location.reload()
+      })
+    </script><div id="portal-root"><div role="presentation" class="fixed z-[1300] inset-0 flex justify-center items-center m-auto !w-[90%]" aria-hidden="false"><div aria-hidden="true" class="fixed flex items-center justify-center inset-0 -z-[1] bg-black bg-opacity-50" style="opacity: 1; transition: opacity 225ms ease-in-out;"></div><div role="dialog" class="bg-white flex flex-col outline-none overflow-y-auto max-h-full max-w-screen-sm rounded-20 shadow-700 max-h-[90%] w-full" tabindex="-1" style="opacity: 1; transition: opacity 225ms ease-in-out;"><div class="px-15 py-20"><p class="body-lg mb-10 font-medium">Not sure about your travel dates?</p><div class="flex items-center"><img alt="fcfIconUrl" class="h-20 w-20" src="https://images.ixigo.com/image/upload/trains/trains/87d7f7fa8c9cbce0584e26213fa862af-oejkp.png"><div class="flex items-center"><p class="body-sm ml-5 text-balance">Opt FCF &amp; get 100% train fare refund<a href="https://www.confirmtkt.com/free-cancellation?flow=pwa" target="_blank" class="ml-5" rel="noreferrer"><svg width="15" height="15" font-size="1.5rem" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-testid="InfoCircleIcon" class="h-20 w-20 text-secondary" style="user-select: none; display: inline-block;"><path fill-rule="evenodd" d="M12 19.3906c4.1421 0 7.5-3.3578 7.5-7.5s-3.3579-7.5-7.5-7.5-7.5 3.3579-7.5 7.5 3.3579 7.5 7.5 7.5m0 1.5c4.9706 0 9-4.0294 9-9s-4.0294-9-9-9-9 4.0295-9 9 4.0294 9 9 9m0-10.4844a.75.75 0 0 1 .75.75v4.0269a.75.75 0 0 1-1.5 0v-4.0269a.75.75 0 0 1 .75-.75m0-.9956a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5" clip-rule="evenodd"></path></svg></a></p></div></div><div class="mt-15 w-full flex flex-row-reverse space-x-20 space-x-reverse"><button class="inline-flex justify-center items-center bg-brand-solid text-brand-solid hover:bg-brand-solid-over gap-5px rounded-10 min-h-40 button-md icon-md px-15px body-sm w-1/2">Secure my trip</button><button class="inline-flex justify-center items-center text-brand-outline hover:bg-brand-outline-over border-brand-outline border-1.5 border-solid gap-5px rounded-10 min-h-40 button-md icon-md px-15px body-sm w-1/2">Not now</button></div><div class="mt-15 flex items-center"><img alt="fcfIconUrl" class="w-50 h-6" src="https://images.ixigo.com/image/upload/trains/trains/f28ae9c6be60c8fee65a11e1f97ec341-hbcyc.png"><p class="body-sm body-xs ml-5 text-neutral-500">Many passengers with last-minute cancellations received a full train fare refund with FCF.</p></div></div></div></div></div></body></html>
