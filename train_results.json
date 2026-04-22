@@ -37,37 +37,37 @@
             },
             {
                 "class": "SL",
-                "status": "WL 94",
+                "status": "WL 95",
                 "fare": "\u20b9515",
-                "chance": "41%",
+                "chance": "39%",
                 "is_tatkal": false
             },
             {
                 "class": "3E",
                 "status": "WL 37",
                 "fare": "\u20b91,235",
-                "chance": "69%",
+                "chance": "29%",
                 "is_tatkal": false
             },
             {
                 "class": "3A",
-                "status": "WL 88",
+                "status": "WL 89",
                 "fare": "\u20b91,325",
-                "chance": "68%",
+                "chance": "36%",
                 "is_tatkal": false
             },
             {
                 "class": "2A",
-                "status": "WL 30",
+                "status": "WL 32",
                 "fare": "\u20b91,865",
-                "chance": "68%",
+                "chance": "64%",
                 "is_tatkal": false
             },
             {
                 "class": "SL",
                 "status": "WL 36",
                 "fare": null,
-                "chance": "54%",
+                "chance": "50%",
                 "is_tatkal": true
             }
         ]
@@ -238,7 +238,7 @@
         "availabilities": [
             {
                 "class": "3A",
-                "status": "WL 62",
+                "status": "WL 61",
                 "fare": "\u20b9965",
                 "chance": "28%",
                 "is_tatkal": false

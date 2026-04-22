@@ -26,7 +26,7 @@
                 },
                 {
                     "class": "SL",
-                    "status": "WL 94",
+                    "status": "WL 95",
                     "fare": "\u20b9515",
                     "chance": "70%",
                     "source": "Paytm"
@@ -40,7 +40,7 @@
                 },
                 {
                     "class": "3A",
-                    "status": "WL 88",
+                    "status": "WL 89",
                     "fare": "\u20b91,325",
                     "chance": "70%",
                     "source": "Paytm"
@@ -247,7 +247,7 @@
                 },
                 {
                     "class": "3A",
-                    "status": "None (WL 64)",
+                    "status": "None (WL 61)",
                     "fare": " \u20b9965",
                     "source": "ConfirmTkt"
                 },
@@ -259,7 +259,7 @@
                 },
                 {
                     "class": "2A",
-                    "status": "None (WL 54)",
+                    "status": "None (WL 55)",
                     "fare": " \u20b93200",
                     "source": "ConfirmTkt"
                 },
@@ -370,7 +370,7 @@
             "classes": [
                 {
                     "class": "3A",
-                    "status": "None (WL 64)",
+                    "status": "None (WL 61)",
                     "fare": " \u20b9965",
                     "source": "ConfirmTkt"
                 }
@@ -387,7 +387,7 @@
                 },
                 {
                     "class": "2A",
-                    "status": "None (WL 54)",
+                    "status": "None (WL 55)",
                     "fare": " \u20b93200",
                     "source": "ConfirmTkt"
                 },

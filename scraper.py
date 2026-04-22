@@ -4,13 +4,20 @@ import re
 from scrapling.fetchers import DynamicFetcher
 import pandas as pd
 
+from quota_manager import analyze_passengers
+
 class TrainScraper:
     def __init__(self):
         self.base_url = "https://tickets.paytm.com/trains/searchTrains"
 
-    def fetch_trains(self, source, destination, date):
-        url = f"{self.base_url}/{source}/{destination}/{date}"
-        print(f"Fetching trains from {url}...")
+    def fetch_trains(self, source, destination, date, quota="GN"):
+        import urllib.parse
+        s_enc = urllib.parse.quote(source)
+        d_enc = urllib.parse.quote(destination)
+        url = f"{self.base_url}/{s_enc}/{d_enc}/{date}"
+        if quota != "GN":
+            url = f"{url}?quota={quota}"
+        print(f"Fetching trains ({quota}) from {url}...")
         
         def interact(page):
             try:
@@ -116,8 +123,10 @@ class TrainScraper:
             
         return trains
 
-def filter_and_rank(trains):
+def filter_and_rank(trains, quota="GN"):
     flat_data = []
+    quota_bonus = 500 if quota != "GN" else 0
+    
     for t in trains:
         for av in t['availabilities']:
             fare_val = 0
@@ -134,7 +143,7 @@ def filter_and_rank(trains):
             elif av['status'] and 'RAC' in av['status']:
                 chance_val = 90
             
-            score = chance_val * 10 - (fare_val / 100)
+            score = chance_val * 10 - (fare_val / 100) + quota_bonus
             if av['status'] == "NOT OPEN":
                 score = -1000
             
@@ -142,6 +151,7 @@ def filter_and_rank(trains):
                 "Train Name": t['name'],
                 "Train No": t['number'],
                 "Class": av['class'],
+                "Quota": quota,
                 "Status": av['status'],
                 "Fare": av['fare'],
                 "Chance": av['chance'] or ("100%" if (av['status'] and 'AVL' in av['status']) else "N/A"),
@@ -160,17 +170,30 @@ if __name__ == "__main__":
     parser.add_argument("--source", default="ADI_Ahmedabad Jn", help="Source station")
     parser.add_argument("--dest", default="NDLS_Delhi- All Stations", help="Destination station")
     parser.add_argument("--date", default="20260503", help="Date in YYYYMMDD format")
+    parser.add_argument("--quota", default=None, help="Quota code (GN, SS, LD, TQ)")
     
     args = parser.parse_args()
     
+    search_quota = args.quota
+    if not search_quota:
+        analysis = analyze_passengers()
+        # Priority: SS > LD > GN
+        if analysis and analysis["eligible_quotas"].get("SS"):
+            search_quota = "SS"
+        elif analysis and analysis["eligible_quotas"].get("LD"):
+            search_quota = "LD"
+        else:
+            search_quota = "GN"
+        print(f"💡 Auto-recommended Quota based on passengers.json: {search_quota}")
+
     scraper = TrainScraper()
-    train_data = scraper.fetch_trains(args.source, args.dest, args.date)
+    train_data = scraper.fetch_trains(args.source, args.dest, args.date, quota=search_quota)
     
     if not train_data:
         print("No trains found.")
     else:
-        results = filter_and_rank(train_data)
-        print("\nTop Recommended Tickets:")
+        results = filter_and_rank(train_data, quota=search_quota)
+        print(f"\nTop Recommended Tickets (Quota: {search_quota}):")
         print(results.head(15).to_string(index=False))
         
         with open("train_results.json", "w") as f:

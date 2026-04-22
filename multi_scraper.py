@@ -5,10 +5,25 @@ from datetime import datetime, timedelta
 from scrapling.fetchers import DynamicFetcher
 import pandas as pd
 
+from quota_manager import analyze_passengers
+
 class MultiSourceScraper:
     def __init__(self):
         self.paytm_base = "https://tickets.paytm.com/trains/searchTrains"
         self.confirmtkt_base = "https://www.confirmtkt.com/rbooking/trains/from"
+
+    def get_recommended_quota(self):
+        analysis = analyze_passengers()
+        if not analysis:
+            return "GN"
+        
+        quotas = analysis.get("eligible_quotas", {})
+        # Priority: Senior Citizen > Ladies > General
+        if quotas.get("SS"):
+            return "SS"
+        if quotas.get("LD"):
+            return "LD"
+        return "GN"
 
     def is_tatkal_open(self, date_str):
         """
@@ -26,9 +41,16 @@ class MultiSourceScraper:
         except:
             return True # Fallback to showing if date parsing fails
 
-    def fetch_paytm(self, source, dest, date):
-        url = f"{self.paytm_base}/{source}/{dest}/{date}"
-        print(f"Fetching Paytm: {url}...")
+    def fetch_paytm(self, source, dest, date, quota="GN"):
+        import urllib.parse
+        s_enc = urllib.parse.quote(source)
+        d_enc = urllib.parse.quote(dest)
+        
+        url = f"{self.paytm_base}/{s_enc}/{d_enc}/{date}"
+        if quota != "GN":
+            url = f"{url}?quota={quota}"
+            
+        print(f"Fetching Paytm ({quota}): {url}...")
         self.current_search_date = date
         
         def interact(page):
@@ -93,13 +115,16 @@ class MultiSourceScraper:
             if num: trains[num] = {"name": name, "classes": classes}
         return trains
 
-    def fetch_confirmtkt(self, source_code, dest_code, date_str):
+    def fetch_confirmtkt(self, source_code, dest_code, date_str, quota="GN"):
         # date_str: YYYYMMDD -> DD-MM-YYYY
         self.current_search_date = date_str
         d = date_str
         formatted_date = f"{d[6:8]}-{d[4:6]}-{d[0:4]}"
         url = f"{self.confirmtkt_base}/{source_code}/to/{dest_code}/{formatted_date}"
-        print(f"Fetching ConfirmTkt: {url}...")
+        if quota != "GN":
+            url = f"{url}?quota={quota}"
+            
+        print(f"Fetching ConfirmTkt ({quota}): {url}...")
         
         response = DynamicFetcher.fetch(url, network_idle=True, timeout=60000)
         return self.parse_confirmtkt(response)
@@ -140,9 +165,13 @@ class MultiSourceScraper:
             if num: trains[num] = {"name": name, "classes": classes}
         return trains
 
-def merge_and_rank(paytm_data, ct_data):
+def merge_and_rank(paytm_data, ct_data, quota="GN"):
     all_nums = set(paytm_data.keys()) | set(ct_data.keys())
     merged_results = []
+    
+    quota_bonus = 0
+    if quota != "GN":
+        quota_bonus = 500 # Significant boost for quota-based matches as they are targeted
     
     for num in all_nums:
         p_info = paytm_data.get(num, {})
@@ -189,11 +218,12 @@ def merge_and_rank(paytm_data, ct_data):
                 chance_val = max(0, 70 - wl_num)
             
             fare_num = int(re.sub(r'[^\d]', '', fare)) if fare and re.sub(r'[^\d]', '', fare).isdigit() else 1000
-            score = chance_val * 10 - (fare_num / 100)
+            score = chance_val * 10 - (fare_num / 100) + quota_bonus
             
             merged_results.append({
                 "Train": f"{name} ({num})",
                 "Class": code,
+                "Quota": quota,
                 "Status": final_status,
                 "Chance": chance if chance else f"{chance_val}%",
                 "Fare": fare,
@@ -211,16 +241,27 @@ if __name__ == "__main__":
     parser.add_argument("--source", default="ADI")
     parser.add_argument("--dest", default="NDLS")
     parser.add_argument("--date", default="20260503")
+    parser.add_argument("--quota", default=None, help="Quota code (GN, SS, LD, TQ)")
     args = parser.parse_args()
     
     scraper = MultiSourceScraper()
+    
+    analysis = analyze_passengers()
+    if analysis and analysis.get("strategy") == "SPLIT":
+        print("\n⚠️  STRATEGY ALERT: " + analysis["strategy_note"])
+    
+    search_quota = args.quota
+    if not search_quota:
+        search_quota = scraper.get_recommended_quota()
+        print(f"💡 Auto-recommended Quota (primary): {search_quota}")
+    
     # For Paytm we need the full names usually, but let's try with codes first or map them
     # For ADI/NDLS it works
-    p_data = scraper.fetch_paytm(f"{args.source}_Ahmedabad Jn", f"{args.dest}_Delhi- All Stations", args.date)
-    c_data = scraper.fetch_confirmtkt(args.source, args.dest, args.date)
+    p_data = scraper.fetch_paytm(f"{args.source}_Ahmedabad Jn", f"{args.dest}_Delhi- All Stations", args.date, quota=search_quota)
+    c_data = scraper.fetch_confirmtkt(args.source, args.dest, args.date, quota=search_quota)
     
-    results = merge_and_rank(p_data, c_data)
-    print("\nCross-Verified Recommended Tickets:")
+    results = merge_and_rank(p_data, c_data, quota=search_quota)
+    print(f"\nCross-Verified Recommended Tickets (Quota: {search_quota}):")
     print(results.head(15).to_string(index=False))
     
     with open("multi_source_results.json", "w") as f:

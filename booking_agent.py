@@ -11,7 +11,7 @@ def highlight(element):
     element.evaluate("el => { el.style.border = '5px solid red'; el.style.backgroundColor = 'yellow'; }")
     time.sleep(1)
 
-def run_booking(source, dest, date, train_no, train_class, headless=False):
+def run_booking(source, dest, date, train_no, train_class, quota="GN", headless=False):
     passengers = load_passengers()
     
     with sync_playwright() as p:
@@ -21,7 +21,13 @@ def run_booking(source, dest, date, train_no, train_class, headless=False):
         page = context.new_page()
         
         # 1. Navigate to Search
-        url = f"https://tickets.paytm.com/trains/searchTrains/{source}/{dest}/{date}"
+        import urllib.parse
+        s_enc = urllib.parse.quote(source)
+        d_enc = urllib.parse.quote(dest)
+        url = f"https://tickets.paytm.com/trains/searchTrains/{s_enc}/{d_enc}/{date}"
+        if quota != "GN":
+            url = f"{url}?quota={quota}"
+            
         print(f"🚀 Navigating to: {url}")
         page.goto(url)
         page.screenshot(path="step1_search.png")
@@ -170,8 +176,9 @@ if __name__ == "__main__":
     parser.add_argument("--date", required=True, help="Date in YYYYMMDD")
     parser.add_argument("--train", required=True, help="Train Number (5 digits)")
     parser.add_argument("--class_code", required=True, help="Class (e.g. 2A, 3A, SL)")
+    parser.add_argument("--quota", default="GN", help="Quota (GN, SS, LD, TQ)")
     parser.add_argument("--headless", action="store_true", help="Run in headless mode")
     
     args = parser.parse_args()
     
-    run_booking(args.source, args.dest, args.date, args.train, args.class_code, args.headless)
+    run_booking(args.source, args.dest, args.date, args.train, args.class_code, args.quota, args.headless)
