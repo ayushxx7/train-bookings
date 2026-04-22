@@ -1,7 +1,7 @@
 # 🚂 Train Bookings (RailSkeptic)
 
-[![License: MIT](https://img.for-the-badge.com/static/v1?label=License&message=MIT&color=blue&style=for-the-badge)](LICENSE)
-[![Built with Scrapling](https://img.for-the-badge.com/static/v1?label=Built%20With&message=Scrapling&color=orange&style=for-the-badge)](https://github.com/D4Vinci/Scrapling)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+[![Built with Scrapling](https://img.shields.io/badge/Built%20With-Scrapling-orange.svg?style=for-the-badge)](https://github.com/D4Vinci/Scrapling)
 
 A high-signal train booking scraper and automation tool that cross-verifies availability between multiple sources (**Paytm**, **ConfirmTkt**) and enforces strict IRCTC rules (like Tatkal windows) to ensure you're never misled by cached data.
 
