@@ -81,6 +81,10 @@ class MultiSourceScraper:
             num_raw = card.css('[data-testid="trainNumber"]::text').get()
             num = re.search(r'(\d{5})', num_raw).group(1) if num_raw and re.search(r'(\d{5})', num_raw) else ""
             
+            dept_time = card.css('[data-testid="deptDateTime"] .enfHN::text').get()
+            arr_time = card.css('#srpArrDateTime .enfHN::text').get()
+            duration = card.css('#srpDuration::text').get()
+            
             all_text = " ".join(card.css("*::text").getall())
             not_started = "Tatkal Booking not started yet" in all_text or "expected to start at" in all_text
             
@@ -112,7 +116,14 @@ class MultiSourceScraper:
                         "source": "Paytm"
                     })
             
-            if num: trains[num] = {"name": name, "classes": classes}
+            if num: 
+                trains[num] = {
+                    "name": name, 
+                    "dept": dept_time, 
+                    "arr": arr_time, 
+                    "duration": duration,
+                    "classes": classes
+                }
         return trains
 
     def fetch_confirmtkt(self, source_code, dest_code, date_str, quota="GN"):
@@ -138,6 +149,13 @@ class MultiSourceScraper:
             num = card.attrib.get('id', '').replace('train-', '')
             name = card.css('.truncate::text').get() # Simple selector for name
             
+            # Extract times
+            # ConfirmTkt structure: ._time_662zq_26 (Dept), ._time_662zq_47 (Arr), ._duration_662zq_42 (Duration)
+            # Using more robust relative selectors
+            dept_time = card.css('div:contains("Departure Time") + div::text, div:contains("Departure") + div::text, ._time_662zq_26::text').get()
+            arr_time = card.css('div:contains("Arrival Time") + div::text, div:contains("Arrival") + div::text, ._time_662zq_47::text').get()
+            duration = card.css('._duration_662zq_42::text').get()
+
             classes = []
             # Availability cards
             avail_cards = card.css('div._cache-card-wrapper_662zq_5')
@@ -149,12 +167,12 @@ class MultiSourceScraper:
                 # Check for Tatkal indicator in ConfirmTkt
                 # ConfirmTkt often shows TQ or Tatkal in labels
                 all_ac_text = " ".join(ac.css("*::text").getall())
-                is_tatkal = "TQ" in code or "Tatkal" in all_ac_text
+                is_tatkal = "TQ" in (code or "") or "Tatkal" in all_ac_text
                 
                 if is_tatkal and not tatkal_open:
                     status = "NOT OPEN (TATKAL)"
                 else:
-                    status = f"{status_main} ({status_sub})" if status_sub else status_main
+                    status = f"{status_main} ({status_sub})" if status_sub else (status_main or "Unknown")
                 
                 fare = ac.css('span.body-xs::text').get()
                 if fare and '₹' not in fare: fare = f"₹{fare.strip()}"
@@ -162,7 +180,14 @@ class MultiSourceScraper:
                 if code and len(code) <= 3: # Filter out noise
                     classes.append({"class": code, "status": status, "fare": fare, "source": "ConfirmTkt"})
             
-            if num: trains[num] = {"name": name, "classes": classes}
+            if num: 
+                trains[num] = {
+                    "name": name, 
+                    "dept": dept_time, 
+                    "arr": arr_time, 
+                    "duration": duration,
+                    "classes": classes
+                }
         return trains
 
 def merge_and_rank(paytm_data, ct_data, quota="GN"):
@@ -177,6 +202,9 @@ def merge_and_rank(paytm_data, ct_data, quota="GN"):
         p_info = paytm_data.get(num, {})
         c_info = ct_data.get(num, {})
         name = p_info.get('name') or c_info.get('name') or "Unknown"
+        dept = p_info.get('dept') or c_info.get('dept') or "N/A"
+        arr = p_info.get('arr') or c_info.get('arr') or "N/A"
+        duration = p_info.get('duration') or c_info.get('duration') or "N/A"
         
         p_classes = {cl['class']: cl for cl in p_info.get('classes', [])}
         c_classes = {cl['class']: cl for cl in c_info.get('classes', [])}
@@ -210,7 +238,9 @@ def merge_and_rank(paytm_data, ct_data, quota="GN"):
             if is_blocked: chance_val = -100
             elif "AVL" in final_status or "AVAILABLE" in final_status.upper(): chance_val = 100
             elif chance and "%" in chance:
-                chance_val = int(re.sub(r'[^\d]', '', chance))
+                try:
+                    chance_val = int(re.sub(r'[^\d]', '', chance))
+                except: chance_val = 0
             elif "RAC" in final_status: chance_val = 80
             elif "WL" in final_status:
                 match = re.search(r'WL\s*(\d+)', final_status)
@@ -222,6 +252,9 @@ def merge_and_rank(paytm_data, ct_data, quota="GN"):
             
             merged_results.append({
                 "Train": f"{name} ({num})",
+                "Dept": dept,
+                "Arr": arr,
+                "Dur": duration,
                 "Class": code,
                 "Quota": quota,
                 "Status": final_status,
@@ -264,5 +297,21 @@ if __name__ == "__main__":
     print(f"\nCross-Verified Recommended Tickets (Quota: {search_quota}):")
     print(results.head(15).to_string(index=False))
     
+    # Save everything for follow-up questions
+    output = {
+        "metadata": {
+            "source": args.source,
+            "dest": args.dest,
+            "date": args.date,
+            "quota": search_quota,
+            "timestamp": datetime.now().isoformat()
+        },
+        "recommended": results.to_dict(orient="records"),
+        "raw_data": {
+            "paytm": p_data,
+            "confirmtkt": c_data
+        }
+    }
+    
     with open("multi_source_results.json", "w") as f:
-        json.dump({"paytm": p_data, "confirmtkt": c_data}, f, indent=4)
+        json.dump(output, f, indent=4)
