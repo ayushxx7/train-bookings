@@ -1,10 +1,10 @@
-# 🚂 RailSkeptic (Train Bookings Skill)
+# 🚂 RailSkeptic (Train Search Skill)
 
 [![Tested on Gemini CLI](https://img.shields.io/badge/Tested%20on-Gemini%20CLI-7A23FD.svg?style=for-the-badge)](https://github.com/google/gemini-cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 [![Built with Scrapling](https://img.shields.io/badge/Built%20With-Scrapling-orange.svg?style=for-the-badge)](https://github.com/D4Vinci/Scrapling)
 
-**RailSkeptic** is a high-signal train booking automation tool and Gemini CLI Skill. It cross-verifies availability between **Paytm** and **ConfirmTkt**, enforcing strict IRCTC rules (like Tatkal windows) to ensure you're never misled by cached data.
+**RailSkeptic** is a high-signal train search and availability verification tool and Gemini CLI Skill. It cross-verifies availability between **Paytm** and **ConfirmTkt**, enforcing strict IRCTC rules (like Tatkal windows) to ensure you're never misled by cached data.
 
 ![Demo](showcase/demo.gif)
 
@@ -32,7 +32,7 @@ Most train booking aggregators show cached or "placeholder" availability. This t
 ## 📦 Features
 - **Official Chance Scores**: Extracts confirmation percentages directly from source UIs.
 - **IRCTC Rule Engine**: Enforces booking window logic (AC 10am, Non-AC 11am).
-- **Passenger Automation**: Injects family details from `passengers.json` for rapid checkout (coming soon).
+- **Multi-Source Verification**: Instant comparison between Paytm and ConfirmTkt.
 
 ## 🛠️ Tech Stack
 - **Python 3.14** | **Scrapling** | **Playwright** | **Gemini CLI (OpenCode)**

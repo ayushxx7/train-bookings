@@ -247,7 +247,7 @@
                 },
                 {
                     "class": "3A",
-                    "status": "None (WL 61)",
+                    "status": "None (WL 64)",
                     "fare": " \u20b9965",
                     "source": "ConfirmTkt"
                 },
@@ -271,7 +271,7 @@
                 },
                 {
                     "class": "SL",
-                    "status": "None (WL 94)",
+                    "status": "None (WL 95)",
                     "fare": " \u20b9515",
                     "source": "ConfirmTkt"
                 },
@@ -289,7 +289,7 @@
                 },
                 {
                     "class": "2A",
-                    "status": "None (WL 32)",
+                    "status": "None (WL 34)",
                     "fare": " \u20b91865",
                     "source": "ConfirmTkt"
                 },
@@ -370,7 +370,7 @@
             "classes": [
                 {
                     "class": "3A",
-                    "status": "None (WL 61)",
+                    "status": "None (WL 64)",
                     "fare": " \u20b9965",
                     "source": "ConfirmTkt"
                 }
@@ -404,7 +404,7 @@
             "classes": [
                 {
                     "class": "SL",
-                    "status": "None (WL 94)",
+                    "status": "None (WL 95)",
                     "fare": " \u20b9515",
                     "source": "ConfirmTkt"
                 },
@@ -422,7 +422,7 @@
                 },
                 {
                     "class": "2A",
-                    "status": "None (WL 32)",
+                    "status": "None (WL 34)",
                     "fare": " \u20b91865",
                     "source": "ConfirmTkt"
                 },
